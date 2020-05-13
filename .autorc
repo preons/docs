@@ -4,13 +4,7 @@
     "all-contributors",
     "conventional-commits",
     "first-time-contributor",
-    "released",
-    [
-      "exec",
-      {
-        "afterRelease": "npm version from-git && npm publish"
-      }
-    ]
+    "released"
   ],
   "owner": "preons",
   "repo": "docs",
