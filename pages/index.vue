@@ -3,7 +3,7 @@
     <navigation>
       <h1>Preons</h1>
 
-      <a href></a>
+      <a href><span class="">GitHub</span></a>
     </navigation>
   </div>
 </template>

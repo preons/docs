@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         rel: 'stylesheet',
-        href = "http://unpkg.com/preons/dist/preons.css"
+        href: "http://unpkg.com/preons/dist/preons.css"
       }
     ]
   },
