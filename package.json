@@ -49,10 +49,5 @@
     "nodemon": "^1.18.9",
     "prettier": "^1.19.1",
     "vue-jest": "^4.0.0-0"
-  },
-  "husky": {
-    "hooks": {
-      "post-commit": "npm run release"
-    }
   }
 }

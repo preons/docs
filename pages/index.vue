@@ -8,14 +8,14 @@
       <p class="mb6 mb10-m">
         <a href="https://github.com/preons/preons/blob/master/README.md">
           <button class="bwa2 bg-transparent bca-hotpink hotpink h4 pl3 pr3 bra4">
-            Get started
+            Read the docs
           </button>
         </a>
       </p>
     </div>
     <!-- <div class="ml-au mr-au mw-xxxsuper"></div>
-    <div class="pa2 pb3 relative black pa3-m pt5-m pb5-m">
-      <div class="bg-grey h-100 w-100 absolute t0 l0"></div>
+    <div class="pa2 pb3 relative pa3-m pt5-m pb5-m">
+      <div class="h-100 w-100 absolute t0 l0"></div>
       <div class="relative ml-au mr-au mw-xxxsuper pl1 pr1 pl2-m pr2-m">
         <h3 class="mb1 fwb fs1 lh2 ls1 fs3-m lh3-m mb2-m">
           What is Preons

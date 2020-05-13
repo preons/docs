@@ -35,6 +35,10 @@
     </div>
 
     <nuxt v-if="!search" />
+
+    <footer class="df justify-between items-center pa1 pl2-m pr2-m z-2 fixed b0 l0 w-100">
+      <a class="tdx white ml-au-m mr1 relative"><span>Made by Preons</span></a>
+    </footer>
   </div>
 </template>
 
