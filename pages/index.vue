@@ -1,9 +1,36 @@
 <template>
-  <div>
-    <navigation>
-      <h1>Preons</h1>
+  <div class="lh0 fs0 relative fs1-m lh1-m">
+    <div class="pl1 pr1 pb1 pl2-m pr2-m pb2-m relative ml-au mr-au mw-xxxsuper">
+      <!-- Title -->
+      <h1 class="fs3 lh3 tu mb2 mt1 fwb mw-super mw-xxsuper-m fs5-m lh5-m fs6-l lh6-l">
+        Systemize CSS and the UI 🛰
+      </h1>
+      <p class="mb6 mb10-m">
+        <a href="https://github.com/preons/preons/blob/master/README.md">
+          <button class="bwa2 bg-transparent bca-hotpink hotpink h4 pl3 pr3 bra4">
+            Get started
+          </button>
+        </a>
+      </p>
+    </div>
+    <!-- <div class="ml-au mr-au mw-xxxsuper"></div>
+    <div class="pa2 pb3 relative black pa3-m pt5-m pb5-m">
+      <div class="bg-grey h-100 w-100 absolute t0 l0"></div>
+      <div class="relative ml-au mr-au mw-xxxsuper pl1 pr1 pl2-m pr2-m">
+        <h3 class="mb1 fwb fs1 lh2 ls1 fs3-m lh3-m mb2-m">
+          What is Preons
+        </h3>
 
-      <a href><span class="">GitHub</span></a>
-    </navigation>
+        <p class="mb1 mb2-m">
+          Preons is a functional css library and generator that allows you to:
+        </p>
+        <ul class="pl2 lst-disc pl3-m">
+          <li class="mb1">Write CSS once and build into the future</li>
+          <li class="mb1">Reuse same file multiple projects</li>
+          <li class="mb1">Design unique UI components in the browser</li>
+          <li class="mb1">Customise and generate your library</li>
+        </ul>
+      </div>
+    </div> -->
   </div>
 </template>
