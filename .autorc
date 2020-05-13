@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    "git-tag",
+    "all-contributors",
+    "conventional-commits",
+    "first-time-contributor",
+    "released",
+    [
+      "exec",
+      {
+        "afterRelease": "npm version from-git && npm publish"
+      }
+    ]
+  ],
+  "owner": "preons",
+  "repo": "docs",
+  "name": "Gemma Black",
+  "email": "gblackuk@googlemail.com"
+}
