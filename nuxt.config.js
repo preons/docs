@@ -5,8 +5,7 @@ module.exports = {
    */
   head: {
     title: process.env.npm_package_name || '',
-    meta: [
-      {
+    meta: [{
         charset: 'utf-8'
       },
       {
@@ -19,20 +18,18 @@ module.exports = {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [
-      {
+    link: [{
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
       },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@200;400;500;600;700&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@200;400;500;600;700&display=swap'
       },
       {
         rel: 'stylesheet',
-        href: 'http://unpkg.com/preons/dist/reset.css'
+        href: 'https://unpkg.com/preons/dist/reset.css'
       },
       {
         rel: 'stylesheet',
