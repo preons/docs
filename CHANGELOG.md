@@ -1,3 +1,20 @@
+# v0.0.30 (Thu May 14 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Gemma Black ([@gemmadlou](https://github.com/gemmadlou)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: use https on reset css otherwise it will not load due to mixed content on https site ([@gemmadlou](https://github.com/gemmadlou))
+- fix: remove eslint ([@gemmadlou](https://github.com/gemmadlou))
+
+#### Authors: 1
+
+- Gemma Black ([@gemmadlou](https://github.com/gemmadlou))
+
+---
+
 # v0.0.4 (Thu May 14 2020)
 
 
