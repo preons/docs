@@ -25,7 +25,7 @@
               v-for="(value, suffix) in options.values"
               v-bind:key="suffix"
             >
-              <span class="db w7 w-30-m pr2 white">{{ suffix }}</span>
+              <span class="db w7 w-30-m pr2 white">{{ options.class }}{{ suffix }}</span>
               <span class="db greyl white-m w-70-m">{{ value }}</span>
             </li>
           </ul>
