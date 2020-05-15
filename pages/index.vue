@@ -1,19 +1,13 @@
 <template>
-  <div class="lh0 fs0 relative fs1-m lh1-m">
-    <div class="pl1 pr1 pb1 pl2-m pr2-m pb2-m relative ml-au mr-au mw-xxxsuper">
+  <div class="lh0 fs0 fs1-m lh1-m">
+    <div class="pl1 pr1 pb1 pl2-m pr2-m pb2-m relative ml-au mr-au mw-xxxsuper ml8-l mt3-l">
       <!-- Title -->
       <h1
-        class="fs3 lh3 tu mb2 mt1 fwb mw-super mw-xxsuper-m fs5-m lh5-m fs6-l lh6-l"
-      >
-        Systemize CSS and the UI 🛰
-      </h1>
+        class="fs3 lh3 tu mb2 mt1 fwb mw-super maxw-xxsuper-m fs5-m lh5-m fs6-l lh6-l"
+      >Systemize CSS and the UI 🛰</h1>
       <p class="mb10-m">
         <a href="https://github.com/preons/preons/blob/master/README.md">
-          <button
-            class="bwa2 bg-transparent bca-hotpink hotpink h4 pl3 pr3 bra4"
-          >
-            Read the docs
-          </button>
+          <button class="bwa2 bg-transparent bca-hotpink hotpink h4 pl3 pr3 bra4">Read the docs</button>
         </a>
       </p>
     </div>
@@ -36,5 +30,11 @@
         </ul>
       </div>
     </div>-->
+
+    <footer class="df justify-between items-center pa1 pl2-m pr2-m z-2 absolute b0 l0 w-100">
+      <a class="tdx white ml-au-m mr1 relative">
+        <span>Made by Preons</span>
+      </a>
+    </footer>
   </div>
 </template>

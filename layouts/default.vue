@@ -8,37 +8,24 @@
       <!-- Image overlay -->
       <span class="bg-hotpink absolute t0 l0 w-100 h-100 o-10 z-1"></span>
     </div>
-    <navigation class="df justify-between items-center pa1 pl2-m pr2-m z-2 fixed t0 w-100">
-      <a href="/" class="white tdx relative"><h1>Preons</h1></a>
+    <div class="df justify-between items-center pa1 pl2-m pr2-m z-2 absolute t0 w-100">
+      <a href="/" class="white tdx relative">
+        <h1>Preons</h1>
+      </a>
 
-      <a href="https://github.com/preons/preons" class="tdx hotpink ml-au mr1 relative"
-        ><span>GitHub</span></a
-      >
+      <a href="https://github.com/preons/preons" class="tdx hotpink ml-au mr1 relative">
+        <span>GitHub</span>
+      </a>
 
-      <span v-on:click="showSearch" class="relative">
+      <nuxt-link to="/search" class="relative">
         <img src="/icons/search-white.svg" height="24" width="24" />
-      </span>
-    </navigation>
+      </nuxt-link>
+    </div>
 
     <!-- Padder -->
     <span class="h8 h12-m h-xbig-l dt w-100"></span>
 
-    <!-- Search form -->
-    <div v-if="search" class="pl1 pr1 relative">
-      <div class="align-center pa1 bsa-solid bwa1 bca-white bra4 mw-xxsuper ml-au mr-au">
-        <input
-          class="db bg-transparent white bwa0 w-100"
-          type="text"
-          placeholder="Search references..."
-        />
-      </div>
-    </div>
-
-    <nuxt v-if="!search" />
-
-    <footer class="df justify-between items-center pa1 pl2-m pr2-m z-2 fixed b0 l0 w-100">
-      <a class="tdx white ml-au-m mr1 relative"><span>Made by Preons</span></a>
-    </footer>
+    <nuxt />
   </div>
 </template>
 

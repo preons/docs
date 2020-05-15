@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         rel: 'stylesheet',
-        href: 'https://unpkg.com/preons@0.3.14/dist/preons.css'
+        href: 'https://unpkg.com/preons@0.3.19/dist/preons.css'
       }
     ]
   },
