@@ -78,9 +78,25 @@ export default {
   },
   methods: {
     search(event) {
-      this.searchedProperties = this.properties.filter((item) => {
-        return item.property.indexOf(event.target.value) > -1
-      })
+      this.searchedProperties = this.properties
+        .filter((item) => {
+          return (
+            item.property
+              .toLowerCase()
+              .indexOf(event.target.value.toLowerCase()) > -1
+          )
+        })
+        .sort((a, b) => {
+          if (a.property.indexOf('-') === -1) {
+            return -1
+          }
+
+          if (b.property.indexOf('-') === -1) {
+            return 1
+          }
+
+          return 0
+        })
     }
   }
 }
