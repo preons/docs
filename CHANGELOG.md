@@ -1,3 +1,19 @@
+# v0.0.33 (Sat May 16 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Gemma Black ([@gemmadlou](https://github.com/gemmadlou)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: sort search so padding comes before padding-left etc. ([@gemmadlou](https://github.com/gemmadlou))
+
+#### Authors: 1
+
+- Gemma Black ([@gemmadlou](https://github.com/gemmadlou))
+
+---
+
 # v0.0.32 (Sat May 16 2020)
 
 :tada: This release contains work from a new contributor! :tada:
