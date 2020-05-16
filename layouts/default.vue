@@ -3,7 +3,8 @@
     <div class="fixed t0 l0 w-100 h-100">
       <img
         class="absolute t0 l0 w-100 h-100 of-cover z-1"
-        src="https://images.unsplash.com/photo-1578543880803-fb570c1df1f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3289&q=80"
+        alt="Image of space in the background of the screen"
+        src="/images/space.jpeg"
       />
       <!-- Image overlay -->
       <span class="bg-hotpink absolute t0 l0 w-100 h-100 o-10 z-1"></span>
@@ -17,8 +18,12 @@
         <span>GitHub</span>
       </a>
 
-      <nuxt-link to="/search" class="relative">
-        <img src="/icons/search-white.svg" height="24" width="24" />
+      <nuxt-link
+        to="/search"
+        class="relative"
+        title="Search functional css classes and their related css properties"
+      >
+        <img alt="Search button" src="/icons/search-white.svg" height="24" width="24" />
       </nuxt-link>
     </div>
 
