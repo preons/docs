@@ -1,8 +1,14 @@
-# preons-docs
+# Preons documentation
 
-> Preons documentation
+[Website](https://preons.netlify.app/) | [Contributing](#contributing)
 
-## Build Setup
+[![](docs/images/2020-05-16-11-32-52.png)](https://preons.netlify.app/)
+
+## Contributing
+
+This is based on [Nuxt](https://nuxtjs.org/) and [Vue](https://vuejs.org/).
+
+If something's missing, or you want to help with the documentations, you're more than welcome. Most of the effort is going into buiding Preons itself.
 
 ```bash
 # install dependencies
@@ -36,6 +42,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
