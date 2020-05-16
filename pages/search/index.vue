@@ -32,25 +32,6 @@
         </li>
       </ul>
     </div>
-    <!-- <div class="ml-au mr-au mw-xxxsuper"></div>
-    <div class="pa2 pb3 relative pa3-m pt5-m pb5-m">
-      <div class="h-100 w-100 absolute t0 l0"></div>
-      <div class="relative ml-au mr-au mw-xxxsuper pl1 pr1 pl2-m pr2-m">
-        <h3 class="mb1 fwb fs1 lh2 ls1 fs3-m lh3-m mb2-m">
-          What is Preons
-        </h3>
-
-        <p class="mb1 mb2-m">
-          Preons is a functional css library and generator that allows you to:
-        </p>
-        <ul class="pl2 lst-disc pl3-m">
-          <li class="mb1">Write CSS once and build into the future</li>
-          <li class="mb1">Reuse same file multiple projects</li>
-          <li class="mb1">Design unique UI components in the browser</li>
-          <li class="mb1">Customise and generate your library</li>
-        </ul>
-      </div>
-    </div>-->
   </div>
 </template>
 

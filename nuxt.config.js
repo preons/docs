@@ -4,8 +4,9 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: "Preons. Functional css",
-    meta: [{
+    title: 'Preons. Functional css',
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -18,22 +19,20 @@ module.exports = {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{
+    link: [
+      {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@200;400;500;600;700&display=swap'
+        href:
+          'https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@200;400;500;600;700&display=swap'
       },
       {
         rel: 'stylesheet',
         href: 'https://unpkg.com/preons/dist/reset.css'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://unpkg.com/preons@0.3.19/dist/preons.css'
       }
     ]
   },
@@ -56,7 +55,7 @@ module.exports = {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
     // Doc: https://pwa.nuxtjs.org/
     '@nuxtjs/pwa'
   ],
@@ -86,7 +85,7 @@ module.exports = {
 
   pwa: {
     meta: {
-      theme_color: "#311e67"
+      theme_color: '#311e67'
     }
   }
 }
