@@ -14,22 +14,30 @@
       ></span>
     </div>
     <div
-      class="df justify-between items-center pa1 pl2-m pr2-m z-2 absolute t0 w-100"
+      class="df justify-between justify-end-m items-center pa1 pl2-m pr2-m z-2 absolute t0 w-100"
     >
-      <a href="/" class="white tdx relative">
+      <a href="/" class="white tdx relative mr-au">
         <h1>Preons</h1>
       </a>
 
+      <nuxt-link to="/learn" class="dn dib-m tdx white mr1 relative">
+        Learn
+      </nuxt-link>
+
+      <nuxt-link to="/search" class="dn dib-m tdx white mr1 relative">
+        Reference
+      </nuxt-link>
+
       <a
         href="https://github.com/preons/preons"
-        class="dn dib-m tdx hotpink ml-au mr1 relative"
+        class="dn dib-m tdx hotpink mr1 relative"
       >
-        <span>GitHub</span>
+        GitHub
       </a>
 
       <nuxt-link
         to="/search"
-        class="relative mr-xxsmall ml-au"
+        class="relative mr-xxsmall ml-au ml0-m"
         title="Search functional css classes and their related css properties"
       >
         <img
@@ -95,6 +103,9 @@ export default {
   },
   mounted() {
     this.spaceBg = this.$route.name === 'index' || this.$route.name === 'search'
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightBlock(block)
+    })
   },
   data() {
     return {
@@ -117,6 +128,9 @@ export default {
 @import '~preons/dist/preons';
 
 .s-article {
+  @extend .lh0;
+  @extend .fs0;
+
   // Spacing after:
   li,
   p {
@@ -138,8 +152,10 @@ export default {
   }
 
   h3 {
-    @extend .fs1;
+    @extend .fs0;
     @extend .lh1;
+    @extend .mb1;
+    @extend .fwb;
   }
 
   p {
@@ -150,5 +166,31 @@ export default {
     @extend .ml2;
     @extend .lst-disc;
   }
+
+  a {
+    @extend .tdx;
+    @extend .hotpink;
+  }
+
+  pre {
+    @extend .bg-greyl;
+    @extend .greyd;
+    @extend .pa1;
+    @extend .scroll;
+    @extend .mb2;
+  }
+}
+
+.hljs {
+  background: none;
+  overflow: unset;
+  overflow-x: unset;
+  padding: 0;
+}
+
+.hljs,
+.hljs-subst,
+.hljs-meta {
+  color: inherit;
 }
 </style>

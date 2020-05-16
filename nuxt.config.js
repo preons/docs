@@ -33,6 +33,17 @@ module.exports = {
       {
         rel: 'stylesheet',
         href: 'https://unpkg.com/preons/dist/reset.css'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          '//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css'
+      }
+    ],
+    script: [
+      {
+        src:
+          '//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js'
       }
     ]
   },
