@@ -1,3 +1,20 @@
+# v0.0.38 (Sat May 16 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Gemma Black ([@gemmadlou](https://github.com/gemmadlou)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: missing alt tags ([@gemmadlou](https://github.com/gemmadlou))
+- fix: space image size too big according to audit ([@gemmadlou](https://github.com/gemmadlou))
+
+#### Authors: 1
+
+- Gemma Black ([@gemmadlou](https://github.com/gemmadlou))
+
+---
+
 # v0.0.37 (Sat May 16 2020)
 
 :tada: This release contains work from a new contributor! :tada:
