@@ -9116,10 +9116,10 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-preons@^0.3.20:
-  version "0.3.21"
-  resolved "https://registry.yarnpkg.com/preons/-/preons-0.3.21.tgz#7dba40c4599dce6f8ee4728ea3802f465b7c379b"
-  integrity sha512-WdgC4ibHDE+zq064YMR0YFo/adY9k/sA9tb9XtViJfzW5pCqR9+AIpcCLZERARZMZy8aVYMwvdPaGyrZzPScgA==
+preons@^0.3.22:
+  version "0.3.23"
+  resolved "https://registry.yarnpkg.com/preons/-/preons-0.3.23.tgz#a97f968b083d811bffe13efb96154d6f6ae83def"
+  integrity sha512-vQ2pdP95gFcqMihz2N0S0Rh52ckH8B/mIVYCDXqdk3YRHYDZ6DoYrJXNJS6edaMhOjcb0udFIsQO1ujdVbBTiQ==
   dependencies:
     command-line-args "^5.1.1"
     commander "^5.1.0"

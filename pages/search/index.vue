@@ -3,7 +3,9 @@
     <div class="pl1 pr1 pb1 pl2-m pr2-m pb2-m relative ml-au mr-au mw-xxxsuper">
       <!-- Search form -->
       <div class="pl1 pr1 relative mb1">
-        <div class="align-center pa1 bsa-solid bwa1 bca-white bra4 maxw-xsuper ml-au mr-au">
+        <div
+          class="align-center pa1 bsa-solid bwa1 bca-white bra4 maxw-xsuper ml-au mr-au"
+        >
           <input
             class="db bg-transparent white bwa0 w-100"
             type="text"
@@ -13,10 +15,16 @@
         </div>
       </div>
 
-      <div class="mb6 center greyl">Properties: {{ searchedProperties.length }}</div>
+      <div class="mb6 center greyl">
+        Properties: {{ searchedProperties.length }}
+      </div>
 
       <ul class="grey-l maxw-xsuper ml-au mr-au">
-        <li class="mb3 pa1-m" v-for="(options) in searchedProperties" v-bind:key="options.property">
+        <li
+          class="mb3 pa1-m"
+          v-for="options in searchedProperties"
+          v-bind:key="options.property"
+        >
           <span class="white">{{ options.property }}</span>
           <span class="w-100 bg-white h-wire df mt-small mb-small"></span>
           <ul v-if="options && options['values']">
@@ -25,7 +33,9 @@
               v-for="(value, suffix) in options.values"
               v-bind:key="suffix"
             >
-              <span class="db w7 w-30-m pr2 white">{{ options.class }}{{ suffix }}</span>
+              <span class="db w7 w-30-m pr2 white"
+                >{{ options.class }}{{ suffix }}</span
+              >
               <span class="db greyl white-m w-70-m">{{ value }}</span>
             </li>
           </ul>

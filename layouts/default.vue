@@ -37,7 +37,7 @@
 
       <nuxt-link
         to="/search"
-        class="relative mr-xxsmall ml-au ml0-m"
+        class="dn-m relative mr-xxsmall ml-au ml0-m"
         title="Search functional css classes and their related css properties"
       >
         <img
@@ -103,9 +103,6 @@ export default {
   },
   mounted() {
     this.spaceBg = this.$route.name === 'index' || this.$route.name === 'search'
-    document.querySelectorAll('pre code').forEach((block) => {
-      hljs.highlightBlock(block)
-    })
   },
   data() {
     return {
@@ -130,8 +127,8 @@ export default {
 .s-article {
   @extend .lh0;
   @extend .fs0;
+  @extend .lh1-m;
 
-  // Spacing after:
   li,
   p {
     @extend .mb1;
@@ -146,9 +143,14 @@ export default {
 
   h2 {
     @extend .fs1;
-    @extend .lh1;
+    @extend .lh2;
+    @extend .pt2;
     @extend .mb1;
     @extend .fwb;
+    @extend .bwb1;
+    @extend .bsb-solid;
+    @extend .bca-greyll;
+    @extend .lh4-m;
   }
 
   h3 {
@@ -164,7 +166,9 @@ export default {
 
   li {
     @extend .ml2;
+    @extend .mr2;
     @extend .lst-disc;
+    @extend .mr4-m;
   }
 
   a {
@@ -173,11 +177,19 @@ export default {
   }
 
   pre {
-    @extend .bg-greyl;
+    @extend .bg-greyll;
     @extend .greyd;
     @extend .pa1;
     @extend .scroll;
     @extend .mb2;
+    @extend .mt2;
+  }
+
+  mark {
+    @extend .bg-greyll;
+    @extend .dib;
+    @extend .black;
+    @extend .pa-thin;
   }
 }
 
