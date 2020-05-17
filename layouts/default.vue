@@ -214,6 +214,12 @@ export default {
     @extend .mb2;
     @extend .fxi;
   }
+
+  img {
+    @extend .mb1;
+    @extend .w-100;
+    @extend .h-au;
+  }
 }
 
 .hljs {

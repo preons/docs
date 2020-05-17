@@ -154,7 +154,66 @@
       />
       <h2>How-tos</h2>
       <h3>Create a component: The Card</h3>
-      <p>Coming soon</p>
+      <p>
+        Cards can be found on many websites. It's a good example to use to have
+        a deeper understanding of both Preons and functional css.
+      </p>
+      <img
+        class="maxw-xxbig"
+        src="/images/card.jpg"
+        alt="Website card component"
+      />
+      <p>
+        So in this how-to, we'll be creating a
+        <strong>simple card component</strong>. First, create the container.
+        Setting <mark>.maxw-xxxbig</mark> will limit the size of the card to
+        <mark>32rem</mark>. Setting <mark>.bg-white</mark> will ensure the card
+        background color i white against of the body's grey background.
+      </p>
+
+      <p>
+        The image also needs to be flushed against the edges of the container.
+      </p>
+      <blockquote>
+        <mark>.w-100</mark> means 100% width and <mark>.h-au</mark> is height:
+        auto.
+      </blockquote>
+
+      <CodeBlock value="card-component-1.html" />
+
+      <p>
+        The paragraph shouldn't be flushed against the edges, but have padding.
+      </p>
+
+      <CodeBlock value="card-component-2.html" />
+
+      <p>
+        Finally, the button is also going to be flushed. Notice, that the
+        border-width is 0. The reset css with Preons doesn't remove borders on
+        buttons. The background is <mark>hotpink</mark> but the font color is
+        white. The height is set to <mark>h4</mark> which is 4rem. And the
+        padding is added either side of the button text separately.
+      </p>
+
+      <CodeBlock value="card-component-3.html" />
+
+      <p>All together, the card component code should look like this:</p>
+
+      <CodeBlock value="card-component-4.html" />
+
+      <p>
+        You can probably think of ways to tweak the card component. Maybe you'd
+        rather have padding around the image. Maybe there should be padding
+        around the button also. Maybe the button should have a border-radius.
+        You can make these changes in the browser without compiling any css
+        again.
+      </p>
+
+      <h3>Articles: Extending functional css</h3>
+      <blockquote>Coming soon</blockquote>
+
+      <h3>Responsive UIs</h3>
+      <blockquote>Coming soon</blockquote>
     </div>
   </div>
 </template>
