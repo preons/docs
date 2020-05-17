@@ -18,7 +18,9 @@ export default {
     }
   },
   async mounted() {
-    let response = await this.$axios.get(`/content/html/${this.value}.html`)
+    let response = await this.$axios.get(
+      `${window.location.origin}/content/html/${this.value}.html`
+    )
     this.html = entities.encode(stripIndent(response.data))
     hljs.highlightBlock(this.$refs.codeblock)
   }
