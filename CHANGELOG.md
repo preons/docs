@@ -1,3 +1,19 @@
+# v0.0.41 (Sun May 17 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Gemma Black ([@gemmadlou](https://github.com/gemmadlou)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: get started info more complete ([@gemmadlou](https://github.com/gemmadlou))
+
+#### Authors: 1
+
+- Gemma Black ([@gemmadlou](https://github.com/gemmadlou))
+
+---
+
 # v0.0.40 (Sat May 16 2020)
 
 :tada: This release contains work from a new contributor! :tada:
