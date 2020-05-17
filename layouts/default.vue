@@ -56,10 +56,10 @@
     </div>
 
     <div v-if="menu" class="fixed l0 t0 w-100 h-100 z-3">
-      <span class="bg-black absolute t0 l0 w-100 h-100 o-100 z0"></span>
+      <span class="bg-white absolute t0 l0 w-100 h-100 o-100 z0"></span>
 
       <div
-        class="bg-greyd pa1 df justify-between items-center relative lh0 z-1"
+        class=" pa1 df justify-between items-center relative lh0 z-1 bca-greyll bsa-solid bwb1"
       >
         <a href="/" class="hotpink tdx relative">
           <h1>Preons</h1>
@@ -72,16 +72,28 @@
         </div>
       </div>
 
-      <ul class="greyl relative fwl ls1">
+      <ul class="greyd relative fwl ls1">
         <li>
           <nuxt-link
-            class="pa1 bca-greyd bsa-solid bwb1 db greyl tdx"
-            to="learn"
+            class="pa1 bca-greyll bsa-solid bwb1 db greyd tdx"
+            to="/learn"
             >Learn</nuxt-link
           >
         </li>
-        <li class="pa1 df items-center bca-greyd bsa-solid bwb1">Reference</li>
-        <li class="pa1 df items-center bca-greyd bsa-solid bwb1">GitHub</li>
+        <li>
+          <nuxt-link
+            class="pa1 bca-greyll bsa-solid bwb1 db greyd tdx"
+            to="/search"
+            >Reference</nuxt-link
+          >
+        </li>
+        <li>
+          <a
+            class="pa1 bca-greyll bsa-solid bwb1 db hotpink tdx"
+            href="https://github.com/preons/preons"
+            >GitHub</a
+          >
+        </li>
       </ul>
     </div>
 
@@ -177,12 +189,14 @@ export default {
   }
 
   pre {
-    // @extend .bg-greyll;
-    // @extend .greyd;
-    @extend .pa1;
-    @extend .scroll;
+    @extend .pl1;
+    @extend .pr1;
     @extend .mb2;
     @extend .mt2;
+  }
+
+  code {
+    @extend .pa1;
   }
 
   mark {
@@ -203,10 +217,7 @@ export default {
 }
 
 .hljs {
-  // background: none;
-  // overflow: unset;
-  // overflow-x: unset;
-  padding: 0;
+  spadding: 0;
 }
 
 .hljs,

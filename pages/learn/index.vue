@@ -42,14 +42,14 @@
           >css property</a
         >. You compose these properties together, except instead of in the
         stylesheet, you do it directly in the browser using css classes.
+      </p>
+      <CodeBlock value="button-example.html" />
+      <p>
         Eventually you can build
         <a target="_blank" href="https://github.com/preons/preons#-examples"
           >entire UIs</a
-        >.
-      </p>
-      <p>
-        <mark>.ml2</mark>
-        <br /><br /><mark>.bg-grey</mark>
+        >
+        with very little or no additional css.
       </p>
       <h2 id="build-the-ui">Build the UI</h2>
       <h3>Try it</h3>
@@ -61,14 +61,14 @@
       <CodeBlock value="get-started.html" type="html" />
       <h2>Installation</h2>
       <p>
-        There are several ways to install Preons to start building. You can
-        directly use css or scss packages. If you prefer npm, you can install it
-        that way also.
+        There are several ways to install Preons. You can directly use css or
+        scss packages or import styles as a dependency using npm.
       </p>
       <h3>CDN</h3>
       <p>
-        You can install the latest package but it is recommended you use
-        versioned packages to prevent breaking builds affecting your website.
+        Great for quickly prototyping. It is recommended you use
+        <a href="https://www.npmjs.com/package/preons">versioned</a>
+        packages to prevent breaking changes.
       </p>
       <p>
         <a target="_blank" href="https://unpkg.com/preons/dist/preons.css"
@@ -100,6 +100,20 @@
         src="/images/page-reference.jpg"
         alt="Reference page screenshot"
       />
+      <h3>Use the reset css</h3>
+      <p>
+        The reset css is based on Eric Meyer's reset with a few additions
+        <a target="_blank" href="https://unpkg.com/preons/dist/reset.css"
+          >preons.css</a
+        >, such as <mark>10px</mark> body font reset and form input color
+        inheritance. Feel free to choose
+        <a
+          target="_blank"
+          href="https://css-tricks.com/poll-results-what-css-reset-do-you-use/"
+          >your own reset.css</a
+        >
+        library if you even want one at all.
+      </p>
       <h2 id="the-cli">The CLI: Create your own library</h2>
       <p>
         The Preons cli along with the preons.yaml allows you to customise your
