@@ -3,22 +3,22 @@
     <div class="dn db-m w-xxbig-m pa2-m relative">
       <ul>
         <li>
-          <a href>Guide</a>
+          <a href="#">Guide</a>
         </li>
         <li>
-          <a href>What is Preons</a>
+          <a href="#what-is-preons">What is Preons</a>
         </li>
         <li>
-          <a href>Get started</a>
+          <a href="#build-the-ui">Build the UI</a>
         </li>
         <li>
-          <a href>Quick setup</a>
+          <a href="#the-cli">The CLI</a>
         </li>
       </ul>
     </div>
     <div class="pa1 pt2 pl2-m pr2-m pb2-m relative maxw-xsuper">
       <h1>Guide</h1>
-      <h2>What is Preons</h2>
+      <h2 id="what-is-preons">What is Preons</h2>
       <p>It is two main things:</p>
       <ul>
         <li>
@@ -51,14 +51,14 @@
         <mark>.ml2</mark>
         <br /><br /><mark>.bg-grey</mark>
       </p>
-      <h2>Build the UI</h2>
+      <h2 id="build-the-ui">Build the UI</h2>
       <h3>Try it</h3>
       <p>
         The fastest way to try Preons is to 1) create a quick
         <mark>html</mark> file and add the snippet below or 2) have a play using
         <a target="_blank" href="https://repl.it/@gemmadlou/Preons">repl.it</a>.
       </p>
-      <CodeBlock value="get-started" type="html" />
+      <CodeBlock value="get-started.html" type="html" />
       <h2>Installation</h2>
       <p>
         There are several ways to install Preons to start building. You can
@@ -80,15 +80,11 @@
         >
       </p>
       <h3>npm</h3>
-      <pre class="bg-black">
-        <code v-html="`npm install preons`" class="bash"></code>
-      </pre>
+      <CodeBlockOneLine value="npm install preons" type="bash" />
       <h3>yarn</h3>
-      <pre class="bg-black">
-        <code v-html="`yarn add preons`" class="bash"></code>
-      </pre>
+      <CodeBlockOneLine value="yarn add preons" type="bash" />
       <h3>Import scss</h3>
-      <CodeBlock value="import-scss" type="scss" />
+      <CodeBlockOneLine value='@import "~preons/dist/preons";' type="scss" />
       <h3>Look up the css classes</h3>
       <p>
         When you are starting, you may find the class names like
@@ -101,28 +97,63 @@
       </p>
       <img
         class="w-100 h-au mb2"
-        src="/images/page-reference.png"
+        src="/images/page-reference.jpg"
         alt="Reference page screenshot"
       />
       <h2 id="the-cli">The CLI: Create your own library</h2>
-      <p>Coming soon</p>
+      <p>
+        The Preons cli along with the preons.yaml allows you to customise your
+        own functional css library. Maybe you prefer a different typescale for
+        your fonts. Your website will need different colors or even additional
+        colours than the one in the default preons theme. Maybe there are
+        additional css properties that your project needs like
+        <mark>filter</mark>, <mark>transitions</mark> and <mark>css grid</mark>.
+      </p>
+      <h2>Get started</h2>
+      <p>Install the Preons cli globally.</p>
+      <CodeBlockOneLine value="npm i preons -g" type="bash" />
+      <p>
+        Run the following command to generate the stylesheet from the default
+        yaml file that comes with Preons.
+      </p>
+      <CodeBlockOneLine value="preons stylesheet" type="bash" />
+      <p>
+        You will see the entire css printed out.
+      </p>
+      <blockquote>
+        You can create a scss version using the <mark>-s</mark> flag.
+      </blockquote>
+      <p>
+        But now you will want to customise your own file. To do that, grab a
+        copy of the
+        <a
+          target="_blank"
+          href="https://raw.githubusercontent.com/preons/preons/master/config/preons.yaml"
+          >preons.yaml</a
+        >. It should start like this:
+      </p>
+      <CodeBlock value="preons-example.yaml" type="yaml" />
+      <p>Point it to your stylesheet and run:</p>
+      <CodeBlockOneLine
+        value="preons stylesheet -i your.yaml > your.css"
+        type="bash"
+      />
       <h2>How-tos</h2>
       <h3>Create a component: The Card</h3>
+      <p>Coming soon</p>
     </div>
   </div>
 </template>
 
 <script>
-const stripIndent = require('strip-indent')
-const Entities = require('html-entities').AllHtmlEntities
-
-const entities = new Entities()
 import CodeBlock from '../../components/CodeBlock.vue'
+import CodeBlockOneLine from '../../components/CodeBlockOneLine.vue'
 
 export default {
   layout: 'simple',
   components: {
-    CodeBlock
+    CodeBlock,
+    CodeBlockOneLine
   }
 }
 </script>

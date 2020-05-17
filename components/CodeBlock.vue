@@ -1,28 +1,25 @@
 <template>
-  <pre>
-    <code ref="codeblock" v-html="html" v-bind:class="classType"></code>
-  </pre>
+  <div>
+    <pre><code ref="codeblock" v-html="html" :class="[classType, 'hljs']"></code></pre>
+  </div>
 </template>
 <script>
 const stripIndent = require('strip-indent')
-const Entities = require('html-entities').AllHtmlEntities
-
-const entities = new Entities()
+import hljs from 'highlight.js'
 
 export default {
   props: ['value', 'type'],
   data() {
     return {
       html: '',
-      classType: 'html'
+      classType: this.type || 'html'
     }
   },
   async mounted() {
     let response = await this.$axios.get(
-      `${window.location.origin}/content/html/${this.value}.html`
+      `${window.location.origin}/content/html/${this.value}`
     )
-    this.html = entities.encode(stripIndent(response.data))
-    hljs.highlightBlock(this.$refs.codeblock)
+    this.html = hljs.highlightAuto(stripIndent(response.data)).value
   }
 }
 </script>
