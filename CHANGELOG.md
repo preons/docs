@@ -1,3 +1,20 @@
+# v0.0.50 (Sat May 23 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Gemma Black ([@gemmadlou](https://github.com/gemmadlou)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: nav item color wrong on homepage ([@gemmadlou](https://github.com/gemmadlou))
+- fix: image link broken in first article ([@gemmadlou](https://github.com/gemmadlou))
+
+#### Authors: 1
+
+- Gemma Black ([@gemmadlou](https://github.com/gemmadlou))
+
+---
+
 # v0.0.49 (Sat May 23 2020)
 
 :tada: This release contains work from a new contributor! :tada:
