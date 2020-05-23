@@ -71,7 +71,7 @@ So I read the blurb.
 
 This is what I mocked up again (circa 2020). The original didn't look exactly like this:
 
-[![Tachyons in 5 minutes](http://localhost:3000/images/tachyons-quick-example.jpg)](https://tachyons--gemmadlou.repl.co/)
+[![Tachyons in 5 minutes](/images/tachyons-quick-example.jpg)](https://tachyons--gemmadlou.repl.co/)
 
 > [edit](https://repl.it/@gemmadlou/Tachyons#index.html) on repl.it.
 
