@@ -20,7 +20,7 @@
         <h1>Preons</h1>
       </a>
 
-      <nuxt-link to="/articles" class="dn dib-m tdx mr1 black relative">
+      <nuxt-link to="/articles" class="dn dib-m tdx mr1 white relative">
         Articles
       </nuxt-link>
 
