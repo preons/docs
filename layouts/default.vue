@@ -20,6 +20,10 @@
         <h1>Preons</h1>
       </a>
 
+      <nuxt-link to="/articles" class="dn dib-m tdx mr1 black relative">
+        Articles
+      </nuxt-link>
+
       <nuxt-link to="/learn" class="dn dib-m tdx white mr1 relative">
         Learn
       </nuxt-link>
@@ -78,6 +82,13 @@
             class="pa1 bca-greyll bsa-solid bwb1 db greyd tdx"
             to="/learn"
             >Learn</nuxt-link
+          >
+        </li>
+        <li>
+          <nuxt-link
+            class="pa1 bca-greyll bsa-solid bwb1 db greyd tdx"
+            to="/articles"
+            >Articles</nuxt-link
           >
         </li>
         <li>
@@ -172,6 +183,13 @@ export default {
     @extend .fwb;
   }
 
+  h4 {
+    @extend .fs0;
+    @extend .lh1;
+    @extend .mb1;
+    @extend .tdu;
+  }
+
   p {
     @extend .lh0;
   }
@@ -193,6 +211,7 @@ export default {
     @extend .pr1;
     @extend .mb2;
     @extend .mt2;
+    font-family: monospace;
   }
 
   code {

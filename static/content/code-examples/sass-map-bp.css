@@ -1,0 +1,15 @@
+.bg-blue {
+  background-color: #365e86;
+}
+
+@media screen and (min-width: 40em) {
+  .bg-blue-m {
+    background-color: #365e86;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .bg-blue-l {
+    background-color: #365e86;
+  }
+}

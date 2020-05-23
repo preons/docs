@@ -35,7 +35,11 @@ module.exports = {
         rel: 'stylesheet',
         href: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css'
       }
-    ]
+    ],
+    script: [{
+      src: 'https://platform.twitter.com/widgets.js',
+      type: 'text/javascript'
+    }]
   },
   /*
    ** Customize the progress-bar color

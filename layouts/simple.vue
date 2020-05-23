@@ -7,6 +7,10 @@
         <h1>Preons</h1>
       </a>
 
+      <nuxt-link to="/articles" class="dn dib-m tdx mr1 black relative">
+        Articles
+      </nuxt-link>
+
       <nuxt-link to="/learn" class="dn dib-m tdx mr1 black relative">
         Learn
       </nuxt-link>
@@ -65,6 +69,13 @@
             class="pa1 bca-greyll bsa-solid bwb1 db greyd tdx"
             to="/learn"
             >Learn</nuxt-link
+          >
+        </li>
+        <li>
+          <nuxt-link
+            class="pa1 bca-greyll bsa-solid bwb1 db greyd tdx"
+            to="/articles"
+            >Articles</nuxt-link
           >
         </li>
         <li>

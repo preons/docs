@@ -17,7 +17,7 @@ export default {
   },
   async mounted() {
     let response = await this.$axios.get(
-      `${window.location.origin}/content/html/${this.value}`
+      `${window.location.origin}/content/code-examples/${this.value}`
     )
     this.html = hljs.highlightAuto(stripIndent(response.data)).value
   }
