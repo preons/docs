@@ -214,10 +214,6 @@ export default {
     font-family: monospace;
   }
 
-  code {
-    @extend .pa1;
-  }
-
   mark {
     @extend .bg-greyll;
     @extend .dib;
