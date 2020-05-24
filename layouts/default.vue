@@ -234,6 +234,10 @@ export default {
     @extend .w-100;
     @extend .h-au;
   }
+
+  i {
+    @extend .fxi;
+  }
 }
 
 .hljs {

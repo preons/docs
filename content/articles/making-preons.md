@@ -1,54 +1,17 @@
 ---
 title: Making Preons
+date: May 24, 2020
 ---
-
-## A functional CSS system for building user interfaces
-
-Custom user interfaces don't build themselves.
-
-Days, if not weeks can go into a single site build. They aren’t a grab-and-go thing. But for friends or potential clients that ask for a website, I point them to WordPress or Wix or Squarespace or Shopify because it's sufficient and a lot cheaper.
-
-But some clients want something unique. Something a little bit more tailored, a little bit more involved.
-
-So the designer creates this work of beauty. They go backwards and forwards over everything from gutter widths to line-heights, colors to gradients. It starts in Photoshop, Illustrator or Sketch. Finally, its gets handed to the developer who now handcodes the CSS because the design is unique. What can be cut-and-pasted when it's unique?
-
-### Custom design and the developement takes time.
-
-Here's one troll video as proof:
-
-<blockquote class="twitter-tweet">
-    <p lang="en" dir="ltr">
-        When a project has 1 designer and 1 engineer. 🤣
-        <a href="https://t.co/MpJRaNS0k8">pic.twitter.com/MpJRaNS0k8</a>
-    </p>
-    &mdash; Ivor (@madebyivor)
-    <a
-        href="https://twitter.com/madebyivor/status/1261228317023354880?ref_src=twsrc%5Etfw"
-        >May 15, 2020</a
-    >
-</blockquote>
-
-## Can we go faster
-
-I wanted to design and build beautiful websites in hours, or at a maximum days, not weeks. And I'm not a designer, so I needed a system. A library like Bootstrap is great, but then, everything built with it looks the same without customization.
-
-### But do we want to go faster
-
-Less time doing the same things on each project means more time spent on innovation, writing libraries, building products, improving processes, or building more beautiful websites.
-
-### And is a website really unique
-
-I think my statement above was wrong, or at least, not entirely accurate. Yes. A website is unique, like a person is unique. But there are things that make up a person that aren't unique. Everyone has a heart, bones, muscle, skin. We have eyes and ears, a mouth and a nose.
-
-A website is no different. It has the same components. Most of them do anyways. They have a navbar, a footer, a copyright section. Cards and grids. Buttons and links. Can't we design from the same components, and just change the parts that really are unique?
-
-## So I created Preons
-
-In this article, I share how I made Preons, the accidental iterative process; the dependencies, some of the tools that helped and the principles I leaned on. Hopefully you'll see how simple it is to generate your own library, and then how to build a functional CSS system.
 
 ## 2 years and 4 iterations
 
-### Iteration 1: Tachyons
+\_in progress-
+
+In this article, I'll share with you how I went from using Tachyons to using YAML files to generate functional CSS libraries. You'll see the accidental iterative process, example projects, the dependencies and some of the tools that helped. Hopefully you'll see how simple it is to generate your own library, and then how to build a functional CSS system.
+
+If anything, I hope also to prove that popular best practices are just that. And I've had to get better at choosing when to apply them and when to abandon them.
+
+### Iteration 1 - Tachyons
 
 It was this very library that changed my thinking about stylesheets; how it should be written. I was doing BEM, handcrafting styles and then updating HTML in a never-ending cycle. Tachyons was about writing a stylesheet once, then building the interface with it.
 
@@ -123,6 +86,26 @@ So what happens if I try to have apply different aspect ratios at different brea
   <img src="some-image.png" />
 </div>
 ```
+
+#### Framework or library
+
+Updating Tachyons felt like I was using it as a framework rather than as a dependency. I'd rather generate my own library if I couldn't extend it easily. And I can understand why extending Tachyons because of the priority issue meant changing it.
+
+#### Difference in class conventions
+
+Some of the classes I didn't like were redeclaring rules for the same property. For example, paddings could be overridden by `aspect-ratio`. Instead, I'd rather see `pv-aspect-ratio--16x9`. Then I could override that with a traditional aspect ratio if I wanted to. You might think what use case could there be for that, but it's an examp.e
+
+The other thing I didn't want was for a class to represent to CSS properties. Yes, it'd mean my html would be more verbose.
+
+```html
+<!-- Instead of doing this -->
+<img src="some.jpg" class="hv-auto" />
+
+<!-- I'd do this -->
+<img src="some.jpg" class="hl-auto hr-auto" />
+```
+
+I felt it was more explicit and easier to compose modules together.
 
 ### Iteration 2 - Preonize
 
@@ -202,7 +185,7 @@ The icing on the cake is solving the priority problem at different breakpoints.
 }
 ```
 
-Here's Preonize the function. It literally takes a collection of sass maps and applies it to a property at every breakpoint.
+Here's Preonize the function.
 
 ```
 @mixin preonize($name, $prop, $map, $breakpoints) {
@@ -211,5 +194,29 @@ Here's Preonize the function. It literally takes a collection of sass maps and a
       #{$prop}: $value;
     }
   }
+
+  @each $breakpoint, $breakpoint-value in $breakpoints {
+    @media #{$breakpoint-value} {
+      @each $label, $value in $map {
+        .#{$name}#{$label}-#{$breakpoint} {
+          #{$prop}: $value;
+        }
+      }
+    }
+  }
 }
 ```
+
+It literally takes a collection of sass maps and applies it to a property at every breakpoint.
+
+I was now generating an entire functional CSS library. Minor changes were now trivial. Update the sass maps; compile to css.
+
+#### Project - Pixelex Aspect
+
+One of the great
+
+![](/images/pixelexaspect.jpg)
+
+Iteration 3 - A CLI
+
+After 2 years, it's taken less than a few weeks to build the css, the cli, the reference guide, npm package and docs.
