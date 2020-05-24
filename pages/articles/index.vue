@@ -1,37 +1,31 @@
 <template>
   <div class="relative greyd bg-white s-article df-m">
-    <div class="dn db-m w-xxbig-m pa2-m relative">
+    <div
+      class="pa1 pt2 pl2-m pr2-m pb2-m relative w-100 maxw-xxxsuper ml-au mr-au"
+    >
+      <h1>Articles</h1>
       <ul>
-        <li>
-          <a href="#">Making Preons</a>
-        </li>
-        <li>
-          <a href="#what-is-preons">What is Preons</a>
-        </li>
-        <li>
-          <a href="#build-the-ui">Build the UI</a>
-        </li>
-        <li>
-          <a href="#the-cli">The CLI</a>
+        <li v-for="article in articles">
+          <nuxt-link :to="article.path">{{ article.title }}</nuxt-link>
         </li>
       </ul>
-    </div>
-    <div class="pa1 pt2 pl2-m pr2-m pb2-m relative maxw-xsuper">
-      <h1>Articles</h1>
-      <blockquote>Coming soon</blockquote>
     </div>
   </div>
 </template>
 
 <script>
-import CodeBlock from '../../components/CodeBlock.vue'
-import CodeBlockOneLine from '../../components/CodeBlockOneLine.vue'
-
 export default {
   layout: 'simple',
-  components: {
-    CodeBlock,
-    CodeBlockOneLine
+  data() {
+    return {
+      articles: []
+    }
+  },
+  async asyncData({ $content }) {
+    const articles = await $content('articles').fetch()
+    return {
+      articles
+    }
   }
 }
 </script>
