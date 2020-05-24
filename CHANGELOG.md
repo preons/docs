@@ -1,3 +1,22 @@
+# v0.0.51 (Sun May 24 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Gemma Black ([@gemmadlou](https://github.com/gemmadlou)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: add more to preons article ([@gemmadlou](https://github.com/gemmadlou))
+- fix: line-height for h3 on mobile ([@gemmadlou](https://github.com/gemmadlou))
+- fix: change homepage tag line ([@gemmadlou](https://github.com/gemmadlou))
+- fix: articles index page ([@gemmadlou](https://github.com/gemmadlou))
+
+#### Authors: 1
+
+- Gemma Black ([@gemmadlou](https://github.com/gemmadlou))
+
+---
+
 # v0.0.50 (Sat May 23 2020)
 
 :tada: This release contains work from a new contributor! :tada:
