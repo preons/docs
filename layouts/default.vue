@@ -178,7 +178,6 @@ export default {
 
   h3 {
     @extend .fs0;
-    @extend .lh1;
     @extend .mb1;
     @extend .fwb;
   }
