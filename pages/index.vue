@@ -5,9 +5,9 @@
     >
       <!-- Title -->
       <h1
-        class="fs3 lh3 tu mb2 mt1 fwb mw-super maxw-xxsuper-m fs5-m lh5-m fs6-l lh6-l"
+        class="fs3 lh3 tu mb2 mt1 fwb mw-super maxw-xxxsuper-m fs5-m lh5-m fs6-l lh6-l"
       >
-        Systemize CSS and the UI 🛰
+        A functional CSS system for building user interfaces 🛰
       </h1>
       <p class="mb10-m">
         <nuxt-link to="/learn">
@@ -23,7 +23,7 @@
       class="df justify-between items-center pa1 pl2-m pr2-m z-2 absolute b0 l0 w-100"
     >
       <a class="tdx white ml-au-m mr1 relative">
-        <span>Made by Preons</span>
+        <span>Made withs Preons</span>
       </a>
     </footer>
   </div>
