@@ -194,6 +194,7 @@ export default {
   }
 
   li {
+    @extend .lh0;
     @extend .ml2;
     @extend .mr2;
     @extend .lst-disc;
@@ -227,6 +228,10 @@ export default {
     @extend .pb1;
     @extend .mb2;
     @extend .fxi;
+
+    p:last-child {
+      @extend .mb0;
+    }
   }
 
   img {
@@ -235,8 +240,25 @@ export default {
     @extend .h-au;
   }
 
+  img[src*='#boxed'] {
+    @extend .bg-greyll;
+    @extend .pa1;
+    @extend .pa2-m;
+  }
+
   i {
     @extend .fxi;
+  }
+
+  ul,
+  ol,
+  p {
+    code {
+      @extend .pa-xxsmall;
+      @extend .pl-small;
+      @extend .pr-small;
+      @extend .bg-greyll;
+    }
   }
 }
 

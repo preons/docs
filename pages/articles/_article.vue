@@ -1,6 +1,8 @@
 <template>
   <div class="relative greyd bg-white df-m">
-    <div class="dn db-m w-xxbig-m pa2-m relative s-article fixed-m">
+    <div
+      class="dn db-m w-xxbig-m mb12-m mt2-m pa2-m pt1-m pr0-m relative scroll-m s-article fixed-m maxh-90-m"
+    >
       <ul>
         <li>
           <a href="#">{{ page.title }}</a>
@@ -43,6 +45,8 @@
 </template>
 
 <script>
+import title from 'title'
+
 export default {
   layout: 'simple',
   async asyncData({ $content, params }) {
@@ -51,7 +55,7 @@ export default {
       .filter((i) => i.tag === 'h2' || i.tag === 'h3' || i.tag === 'h4')
       .map((i) => ({
         link: '#' + i.props.id,
-        name: i.props.id.replace(/--/, ': ').replace(/[-]+/g, ' ')
+        name: title(i.props.id.replace(/--/, ': ').replace(/[-]+/g, ' '))
       }))
     return {
       page,

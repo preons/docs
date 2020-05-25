@@ -3,52 +3,58 @@ title: Making Preons
 date: May 24, 2020
 ---
 
-## 2 years and 4 iterations
+## The Story - 2 years and 4 iterations
 
-\_in progress-
+I loved writing code. I still do.
 
-In this article, I'll share with you how I went from using Tachyons to using YAML files to generate functional CSS libraries. You'll see the accidental iterative process, example projects, the dependencies and some of the tools that helped. Hopefully you'll see how simple it is to generate your own library, and then how to build a functional CSS system.
+Sitting in front of laptop, I was studying yet another project. The design was beautiful as always and all I had to do was make the HTML. But here I was, writing again; the navigation, the card elements, the buttons, the grid, the footer. Dejavu or not, I knew there had to be a way of systemising the creation of websites.
 
-If anything, I hope also to prove that popular best practices are just that. And I've had to get better at choosing when to apply them and when to abandon them.
+All I wanted was to build beautiful websites faster without rewriting the same code every time. Don't we all.
 
-### Iteration 1 - Tachyons
+In this article:
 
-It was this very library that changed my thinking about stylesheets; how it should be written. I was doing BEM, handcrafting styles and then updating HTML in a never-ending cycle. Tachyons was about writing a stylesheet once, then building the interface with it.
+- I share the iterative process of creating Preons
+- The principles I learned along the way
+- How I became better at design even though I would never call myself a designer
+- And how Preons became a css generating system
 
-<blockquote>
-    Checkout Tachyons ->
-    <a href="https://tachyons.io/docs/" target="_blank"
-        >https://tachyons.io/docs/</a
-    >
-</blockquote>
+## Iteration 0 - Tachyons
 
-So I read the blurb.
+### The story
 
-> **Built for designing.**
+It's a bit cheeky saying [Tachyons](https://tachyons.io/docs/) is the first iteration. I didn't build it. [Adam Morse](http://mrmrs.cc/) and co [did](https://github.com/tachyons-css/tachyons).
+
+All I know is I [cottoned on to it](https://www.collinsdictionary.com/dictionary/english/cotton-on) either at the end of 2017 or the beginning of 2018.
+
+But this very library changed my thinking about how stylesheets [could](https://www.thoughtworks.com/insights/blog/good-programer-avoid-being-one) be written. I was doing [BEM](http://getbem.com/). And there was a cycle. Every UI element needed both handwritten css and afterwards, HTML.
+
+Tachyons was different. Tachyons was about writing a stylesheet once, then building the interface with that stylesheet right there in the DOM.
+
+> **Tachyons: Built for designing.**
 >
 > Create fast loading, highly readable, and 100% responsive interfaces with as little css as possible.
 >
-> Modules can be altered, extended, or changed to meet your design needs. You shouldn't need to write css everytime you want to build a new ui component. By learning the composable building blocks in tachyons, you can quickly start to build out interfaces while writing little to no css.
+> Modules can be altered, extended, or changed to meet your design needs. You shouldn't need to write css every time you want to build a new UI component. By learning the composable building blocks in tachyons, you can quickly start to build out interfaces while writing little to no css.
 
 5 minutes later, I copy-pasted up a nice looking user interface. No CSS written. The hard work went solely into finding components that looked good. A nice header. A fancy footer. And something in between.
 
-This is what I mocked up again (circa 2020). The original didn't look exactly like this:
+This is what I mocked up again (circa 2020):
 
-[![Tachyons in 5 minutes](/images/tachyons-quick-example.jpg)](https://tachyons--gemmadlou.repl.co/)
+[![Tachyons in 5 minutes](/images/tachyons-quick-example.jpg#boxed)](https://tachyons--gemmadlou.repl.co/)
 
 > [edit](https://repl.it/@gemmadlou/Tachyons#index.html) on repl.it.
 
-You can change paddings. Add margins. Increase font sizes right there in the browser.
+Change paddings. Add margins. Increase font sizes right there in the browser.
 
 ```html
 <footer class="pa4 pa5-l black-70 bt b--black-10"></footer>
 ```
 
-The only thing was, I wanted a different font. A Google font to be exact. And then the colors weren't what I liked. Yes, I wanted slight changes at different breakpoints that didn't come with Tachyons.
+The only thing was, I wanted a different font. A Google font to be exact. And then the colours weren't what I liked.
 
-Being able to make these little customisations were important. Not every project has the same vertical rhythm. Not every project needs certain CSS properties.
+Being able to make these little customisations quickly and easily felt important. Not every project has the same vertical rhythm. Not every project needs the same CSS properties let alone values.
 
-So I did the easiest thing. I hardcoded classes into a stylesheet that extended the Tachyons library. But there was a priority problem. Can you spot it?
+So I did the easiest thing, but the wrong thing. I hardcoded classes into a new stylesheet that "extended" the Tachyons library. But there was a priority problem. Can you spot it?
 
 ```css
 /** 
@@ -79,62 +85,39 @@ So I did the easiest thing. I hardcoded classes into a stylesheet that extended 
 }
 ```
 
-So what happens if I try to have apply different aspect ratios at different breakpoints.
+So what happens if I try to have apply different aspect ratios at different breakpoints?
 
 ```html
-<div class="aspect-ratio--4-3 aspect-ratio--16x9-l hidden">
+<div class="aspect-ratio--4-3 aspect-ratio--16x9-l">
   <img src="some-image.png" />
 </div>
 ```
 
-#### Framework or library
+### Lesson 1 - Framework or library
 
-Updating Tachyons felt like I was using it as a framework rather than as a dependency. I'd rather generate my own library if I couldn't extend it easily. And I can understand why extending Tachyons because of the priority issue meant changing it.
-
-#### Difference in class conventions
-
-Some of the classes I didn't like were redeclaring rules for the same property. For example, paddings could be overridden by `aspect-ratio`. Instead, I'd rather see `pv-aspect-ratio--16x9`. Then I could override that with a traditional aspect ratio if I wanted to. You might think what use case could there be for that, but it's an examp.e
-
-The other thing I didn't want was for a class to represent to CSS properties. Yes, it'd mean my html would be more verbose.
-
-```html
-<!-- Instead of doing this -->
-<img src="some.jpg" class="hv-auto" />
-
-<!-- I'd do this -->
-<img src="some.jpg" class="hl-auto hr-auto" />
-```
-
-I felt it was more explicit and easier to compose modules together.
-
-### Iteration 2 - Preonize
-
-**Found the issue in the above?** The media queries above will be ignored and the last rule is always applied because they are all classes. They all have the same specificity.
-
-The priority problem reared its head very quickly. Just to explain, it's not the [CSS specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) issue, where IDs have precedence over classes and classes over elements. Working with BEM already solved that. Everything was a class. No `!important` needed.
-
-The [priority](https://css-tricks.com/precedence-css-order-css-matters/) problem is just a page order issue. The CSS lower down the stylesheet overrides the CSS above it.
-
-<div style="width:100%;height:0;padding-bottom:55%;position:relative;">
-<iframe
-    src="https://giphy.com/embed/pvDp7Ewpzt0o8"
-    width="100%"
-    height="100%"
-    style="position:absolute"
-    frameBorder="0"
-    class="giphy-embed"
-    allowFullScreen
-></iframe>
-</div>
-
-<p>
-<a
-    href="https://giphy.com/gifs/star-wars-yoda-the-empire-strikes-back-pvDp7Ewpzt0o8"
-    >via GIPHY</a
+> **Library**
 >
-</p>
+> When you use a library, you are in charge of the flow of the application. You are choosing when and where to call the library.
+>
+> **Framework**
+>
+> When you use a framework, the framework is in charge of the flow. It provides some places for you to plug in your code, but it calls the code you plugged in as needed.
+>
+> - [The Difference Between a Framework and a Library](https://www.freecodecamp.org/news/the-difference-between-a-framework-and-a-library-bd133054023f/)
 
-Then I thought, instead of modifying and customising Tachyons, could I just generate it. What if I defined all my rules using sass maps like this:
+Updating Tachyons felt like I was using it as a framework rather than as a dependency. To prevent priority issues, you need to insert your new css classes at particular places in the stylesheet. But then the line is blurred between what is mine and added, and what is Tachyons'.
+
+Then I thought, maybe it's better instead, not to extend Tachyons, but generate my own css library.
+
+### Lesson 2 - Use what exists
+
+...
+
+## Iteration 1 - Preonize
+
+### Generating a library with one command
+
+What if I defined all my rules using sass maps like this:
 
 ```scss
 $colors: (
@@ -145,7 +128,7 @@ $colors: (
 );
 ```
 
-Then apply them to a css property background-color and end up with this:
+Then applied them to a css property like `background-color` to get this:
 
 ```css
 .bg-blue {
@@ -165,7 +148,7 @@ Then apply them to a css property background-color and end up with this:
 }
 ```
 
-The icing on the cake is solving the priority problem at different breakpoints.
+The icing on the cake is solving the priority problem.
 
 ```css
 .bg-blue {
@@ -185,9 +168,9 @@ The icing on the cake is solving the priority problem at different breakpoints.
 }
 ```
 
-Here's Preonize the function.
+And so I wrote the preonize function. And that was it. Almost.
 
-```
+```scss
 @mixin preonize($name, $prop, $map, $breakpoints) {
   @each $label, $value in $map {
     .#{$name}#{$label} {
@@ -207,16 +190,401 @@ Here's Preonize the function.
 }
 ```
 
-It literally takes a collection of sass maps and applies it to a property at every breakpoint.
+All I had to do was define all my reusable rules, and apply them using `preonize`.
 
-I was now generating an entire functional CSS library. Minor changes were now trivial. Update the sass maps; compile to css.
+```scss
+@include preonize('bg-', background-color, $colors, $breakpoints);
+@include preonize('fill-', fill, $colors, $breakpoints);
+@include preonize('', color, $colors, $breakpoints);
 
-#### Project - Pixelex Aspect
+// etc
+```
 
-One of the great
+Preonize took 4 things:
 
-![](/images/pixelexaspect.jpg)
+- a class prefix like `bg-`
+- a css property like `background-color`
+- a sass map of rules like `$colors: (white: #ffffff, black: #000000)`
+- and an array of breakpoints to apply those rules
 
-Iteration 3 - A CLI
+I was now generating an entire functional CSS library from a [base sass file](https://github.com/gemmadlou/Preon/blob/master/assets/scss/preon.scss). Minor changes were now trivial. Update the sass maps; compile to css
 
-After 2 years, it's taken less than a few weeks to build the css, the cli, the reference guide, npm package and docs.
+### Lesson 3: Opinions and conventions
+
+No one opinion is the ultimate right way. There are definitely wrong ways, but look, I can use my keys to open up packaging instead of a crafts-knife. But it's also true, that not having an opinion for a project will cause confusion eventually, even with one maintainer.
+
+So some of the classes I didn't like were the ones that redeclared rules for the same css property, like `padding-bottom`. For example, padding-bottom could override a completely different class prefix `aspect-ratio`.
+
+This causes the priority issue again.
+
+I felt that there should be one class prefix for one css property.
+
+The other thing I didn't want was for a class to represent two CSS properties. One example is margins. So instead of one class representing `margin-left` and `margin-right` at the same time, it's more explicit to just use two.
+
+```html
+<!-- Instead of doing this -->
+<img src="some.jpg" class="hv-auto" />
+
+<!-- I'd do this -->
+<img src="some.jpg" class="hl-auto hr-auto" />
+```
+
+This decision would eventually help me to write simpler code generators for Preons, though at the time, I didn't know it yet.
+
+### Lesson 4 - Eat your own dog food
+
+I have [Gary Gale](https://twitter.com/vicchi) to thank for the phrase. All it means is, what you're giving others to use, are you using it yourself?
+
+So it's all good building a CSS library but could _I_ use it? In fact, using it highlighted limitations of functional css in general very quickly.
+
+1. Displaying user generated articles
+2. Hovers and animations
+
+### Limitation 1 - Displaying user generated articles
+
+How could I expect a user to write an article and add margins to every paragraph?
+
+```html
+<p class="mb2">My wonderful article paragraph.</p>
+<h2 class="fs1 fs2-m blue">Next headline</h2>
+```
+
+Doing so:
+
+- would actually cause inconsistencies in the design
+- make writing in WYSIWYG difficult
+- writing markdown would be no different from writing html
+- just in general, the writing experience would be awful and take longer
+
+So the solution to this is to create scoped article classes such as `s-article`, something I learned from [Milad Alizadeh](https://github.com/milad-alizadeh) and [Chris Boakes](https://github.com/chrisboakes).
+
+Here's a snippet I use for this Preons' documentations website:
+
+```scss
+.s-article {
+  @extend .lh0;
+  @extend .fs0;
+  @extend .lh1-m;
+
+  li,
+  p {
+    @extend .mb1;
+  }
+
+  h1 {
+    @extend .fs2;
+    @extend .lh2;
+    @extend .mb2;
+    @extend .fwb;
+  }
+
+  h2 {
+    @extend .fs1;
+    @extend .lh2;
+    @extend .pt2;
+    @extend .mb1;
+    @extend .fwb;
+    @extend .bwb1;
+    @extend .bsb-solid;
+    @extend .bca-greyll;
+    @extend .lh4-m;
+  }
+}
+```
+
+Then I apply it where it is needed so it doesn't affect the entire site:
+
+```html
+<div class="s-article">
+  <nuxt-content :document="page" />
+</div>
+```
+
+### Limitation 2 - Hovering and animations
+
+Animations are the life-blood of interactive websites. At a minimum, we need to hover and change things like colors of text and backgrounds. So a new preonize function would be needed.
+
+```scss
+@mixin preonize-hover($name, $prop, $map, $breakpoints) {
+  @each $label, $value in $map {
+    .#{$name}#{$label}:hover {
+      #{$prop}: $value;
+    }
+  }
+
+  @each $breakpoint, $breakpoint-value in $breakpoints {
+    @media #{$breakpoint-value} {
+      @each $label, $value in $map {
+        .#{$name}#{$label}-#{$breakpoint}:hover {
+          #{$prop}: $value;
+        }
+      }
+    }
+  }
+}
+```
+
+## Iteration 2 - A CLI
+
+### The Story
+
+After building a few sites, I had a problem. There were differences in the class conventions I used between them. What was `max-width` again?
+
+```css
+.mw1 {
+  max-width: 1rem;
+}
+
+/** or **/
+
+.maxw1 {
+  max-width: 1rem;
+}
+```
+
+And what about colours? What's the convention? The colour first, or the modifier first?
+
+```css
+.dark-grey {
+  color: grey;
+}
+
+/** or **/
+
+.grey-dark {
+  color: grey;
+}
+```
+
+At first I had very few conventions and was mainly inspired by Tachyons. But switching between projects I was easily forgetting what rule applied where.
+
+Looking up classes wasn't easy using my sass file. I had to find the CSS class, then look up the corresponding global style.
+
+I could look through the CSS, but then I thought, that's not a great user experience. If I could config my rules in yaml or JSON, I could generate documentation.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Still my favorite <a href="https://twitter.com/hashtag/dev?src=hash&amp;ref_src=twsrc%5Etfw">#dev</a> discovery of the year. Cyrille&#39;s concepts on living documentation. <a href="https://t.co/psmtpI2czF">pic.twitter.com/psmtpI2czF</a></p>&mdash; Gemma Black (@GemmaBlackUK) <a href="https://twitter.com/GemmaBlackUK/status/1189968746800123905?ref_src=twsrc%5Etfw">October 31, 2019</a></blockquote>
+
+It was reading [Cyrille Martraire's](https://twitter.com/cyriux?lang=en) book on [Living Documentation](https://www.amazon.co.uk/gp/customer-reviews/R1M97XQ5OMYLU9/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=0134689321) that cemented the idea of turning existing code into docs. And your code would always be in sync with your documentation. But it was a [Michael Bryzek video](https://youtu.be/j6ow-UemzBc?t=1190) that took the concept one step further, generating code from your config.
+
+And he had a point.
+
+I could generate styles themselves from a yaml config into any CSS style language.
+
+- Sass
+- Postcss
+- Less.
+
+One single config would be the definition for both the library and the documentation.
+So `preons.yaml` was born.
+
+```yaml
+preons:
+  baseline: 1.2rem;
+
+  gutter: 2.5rem;
+
+  rules:
+
+  # Preon breakpoints
+  breakpoints:
+
+  # Preon classes
+  classes:
+    - label: bg-
+      css-property: background-color
+      rule:
+        - color
+    - label: bg-
+      css-property: background-color
+      rule:
+        - color
+```
+
+Then I stopped working on the project...
+
+For ages.
+
+### Limitation 3 - Mixing and matching rules
+
+For widths, I want to use gradations of both percentages and `rems`.
+
+For margins, I want the same, but also negative rems. So unless I wanted to repeat myself, I needed a way of mixing different global rules together.
+
+```scss
+$scaled: (
+  n1: -1rem,
+  n2: -2rem,
+  n3: -3rem,
+  n4: -4rem,
+  n5: -5rem,
+  n6: -6rem,
+  n7: -7rem,
+  n8: -8rem,
+  n9: -9rem,
+  n10: -10rem,
+  0: 0,
+  1: 1rem,
+  2: 2rem,
+  3: 3rem,
+  4: 4rem,
+  5: 5rem,
+  6: 6rem,
+  7: 7rem,
+  8: 8rem,
+  9: 9rem,
+  10: 10rem
+);
+```
+
+So I found `map-collect`.
+
+```scss
+@function map-collect($maps...) {
+  $collection: ();
+
+  @each $map in $maps {
+    $collection: map-merge($collection, $map);
+  }
+  @return $collection;
+}
+```
+
+Then I could reuse different global rules and mix-and-match them across different css properties:
+
+```scss
+@include preonize('pa', padding, $scaled, $breakpoints);
+@include preonize(
+  'pl',
+  padding-left,
+  map-collect($scaled, $discrete),
+  $breakpoints
+);
+```
+
+## Iteration 3 - Config, and the rules are just CSS properties
+
+### The Story
+
+If you head to Mozilla's CSS properties page, they list the most popular ones used.
+
+And it occurred to me, why am I using an array, when it should just be an object? I can't redeclare the same property twice because of the priority problem. And I had decided upon the convention of having 1 css property to 1 class prefix.
+
+Yaml linters highlight when you have duplicate properties in an object. It is not allowed. Preons doesn’t come with this but [vscode](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) does bawk.
+
+I also didn't like having to declare global rules for each CSS property, when the time is only applied once, eg. for display: flex
+
+```yaml
+align-content:
+  class: content-
+  values:
+    start: flex-start
+    end: flex-end
+    center: center
+    between: space-between
+    around: space-around
+    stretch: stretch
+```
+
+### Generating documentations
+
+Doing `preons config` would spit out JSON based on the preons.yaml to make creating documentations easier:
+
+```json
+{
+  "border-top-color": {
+    "class": "bct-",
+    "rule": "theme-colors",
+    "values": {
+      "black": "#242027",
+      "white": "#fefeff",
+      "greyll": "#f6f5f9",
+      "greyl": "#beb9cc",
+      "grey": "#7d778e",
+      "greyd": "#47454c",
+      "transparent": "transparent",
+      "hotpink": "#ea2889"
+    },
+    "mappings": {
+      "bct-black": "#242027",
+      "bct-white": "#fefeff",
+      "bct-greyll": "#f6f5f9",
+      "bct-greyl": "#beb9cc",
+      "bct-grey": "#7d778e",
+      "bct-greyd": "#47454c",
+      "bct-transparent": "transparent",
+      "bct-hotpink": "#ea2889"
+    }
+  }
+}
+```
+
+I use this json to build the reference for the [docs](/search).
+
+### Lesson 5 - Release fast and automate versions
+
+Whether you adhere to [romantic versioning](https://github.com/jashkenas/backbone/issues/2888#issuecomment-29076249), [sentimental versioning](http://sentimentalversioning.org/) or [semantic versioning](https://semver.org/), managing versions is a bottleneck. Furthermore, it's like doing paperwork. But we can automate it.
+
+Why automate?
+
+Because moving fast allows fixes and features to be done quickly. The developer writing the code should know if their update is breaking existing functionality or not, whether they are adding a feature, a fix, or an improvement.
+
+So I used Intuit's Auto. Running `npm run release`:
+
+- bumps npm
+- tags the project
+- makes a release in GitHub
+- creates the change log
+
+Done.
+
+### Lesson 6 - Distribute files easily
+
+[Michael Jackson's](https://twitter.com/mjackson) [Unpkg](https://unpkg.com/) allows you to access any file from an npm library at any version and it's another free 🙏. And it made creating the [example repl](https://repl.it/@gemmadlou/Cards) easy.
+
+Here's a great intro to it:
+
+> https://kentcdodds.com/blog/unpkg-an-open-source-cdn-for-npm
+
+### Lesson 7 - Keeping the cli and stylesheets core
+
+More out of, I don't know any good reason to split my codebase between stylesheet and cli in any decent way. So I package them together. Maybe this is bad, but until it becomes a problem, I decided to not worry about it.
+
+It means, preons-theme 0.3.28 was released at the same time as the cli which is also 0.3.28, even if the cli didn't change.
+
+### Lesson 8 - Skip the tests
+
+Now as of May 2020, there aren't any tests. There are no linters either. Dangerous? Maybe. But normally I'd fuss over assuring my code passes all sorts of code quality bells and whistles. This time, I was determined that version 0.0.z would just work and be functionable.
+
+I think Eric Elliot says something like:
+
+- Make it work
+- Make it stable
+- Make it fast
+
+> “Coding faster: Make it work, then make it good” by Michael Parker https://link.medium.com/SRPxvd76F6
+
+[![](/images/iterative-vs-incremental.jpeg)](https://medium.com/@gerterasmus23/the-greatest-example-ever-of-mvp-and-iterative-incremental-development-41fd718ece0)
+
+In fairness, I think the trick is to make it right before giving it to the end user. But, I'm happy the thing generates a library, especially as it's not version at 1.0.0 yet. So llet's leave it at that for now.
+
+If anything, this is the biggest shift in my thinking. Having gone through several iterations, I finally designed a version of Preons that I actually like.
+
+If I started with TDD, I think I'd feel too precious about changing anything because TDD sometimes eats into the design phase, rather than just being a development tool.
+
+I genuinely think design comes before TDD and static type analysis. That's why JavaScript is so powerful. You can iterate fast without worrying about correctness of code.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">An MVP is a viable prototype, not a final product. Don&#39;t worry about perfection. The idea is to get fast feedback from users.</p>&mdash; Eric Elliott (@_ericelliott) <a href="https://twitter.com/_ericelliott/status/1262549798256881664?ref_src=twsrc%5Etfw">May 19, 2020</a></blockquote>
+
+### Lesson 9 - Design first
+
+I saw a video where James Clear talked about two sets of photography students. One group had to come up with the perfect photo, one time. Another group had to take lots of photos and present their best one. The latter scored better apparently because applying their knowledge came from trail and error, learning what worked through practice versus theorizing what worked. That _is_ pragmatism.
+
+My fear is, in our desire to come across as professional, we use tools that can hinder us at the wrong time. During the design phase, the learning phase, the prototyping phase, getting something to work can be much better than writing tests.
+
+Now I've blitzed through the most basic if features, I have a choice, to start firming up what I have with tests. Try a different design. Or adding more features.
+
+## In conclusion
+
+I hope you enjoyed the article, or at least learned that your open source project doesn't have to be right the first time round. By no means am I a decent writer or even correct about everything in this article. So please share feedback.
+
+If you're on Twitter, just @GemmaBlackUK and tell me what I did wrong 😅.
