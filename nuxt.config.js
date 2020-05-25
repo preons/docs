@@ -63,7 +63,9 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module',
     // Doc: https://pwa.nuxtjs.org/
-    '@nuxtjs/pwa'
+    ['@nuxtjs/pwa', {
+      workbox: false
+    }],
   ],
   /*
    ** Nuxt.js modules
