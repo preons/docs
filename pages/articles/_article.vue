@@ -27,7 +27,7 @@
         <img
           alt="Gemma Black avatar"
           class="bca-hotpink bsa-solid bwa1 h3 w3 bra-50 db"
-          src="http://0.gravatar.com/avatar/2ffdfa89aaf6195cd438dc013fff12b2"
+          src="https://0.gravatar.com/avatar/2ffdfa89aaf6195cd438dc013fff12b2"
         />
         <a href="https://github.com/gemmadlou" class="mr-au ml1 grey fs-1 tdx">
           {{ page.author }}
