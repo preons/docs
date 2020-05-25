@@ -246,7 +246,8 @@ export default {
     @extend .pa2-m;
   }
 
-  i {
+  i,
+  em {
     @extend .fxi;
   }
 
