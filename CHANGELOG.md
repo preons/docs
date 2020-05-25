@@ -1,3 +1,21 @@
+# v0.0.55 (Mon May 25 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Gemma Black ([@gemmadlou](https://github.com/gemmadlou)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: remove pwa workbox as it causes page loading issues ([@gemmadlou](https://github.com/gemmadlou))
+- fix: mixed content ([@gemmadlou](https://github.com/gemmadlou))
+- fix: first article grammar and spelling ([@gemmadlou](https://github.com/gemmadlou))
+
+#### Authors: 1
+
+- Gemma Black ([@gemmadlou](https://github.com/gemmadlou))
+
+---
+
 # v0.0.54 (Mon May 25 2020)
 
 :tada: This release contains work from a new contributor! :tada:
