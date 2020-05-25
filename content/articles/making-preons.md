@@ -9,7 +9,7 @@ author: Gemma Black
 
 I loved writing code. I still do.
 
-Sitting in front of laptop, I was studying yet another project. The design was beautiful as always and all I had to do was make the HTML. But here I was, writing again; the navigation, the card elements, the buttons, the grid, the footer. Dejavu or not, I knew there had to be a way of systemising the creation of websites.
+In front of my laptop, I was studying yet another project. The design was beautiful as always. All I had to do was make the HTML. But here I was again, writing the navigation, the card elements, the buttons, the grid, the footer. Déjà vu or not, I knew there had to be a way of systemising the creation of websites.
 
 All I wanted was to build beautiful user interfaces faster without rewriting the same code every time. So I created Preons.
 
@@ -233,10 +233,10 @@ I have [Gary Gale](https://twitter.com/vicchi) to thank for the phrase. All it m
 
 So it's all good building a CSS library but could _I_ use it? In fact, using it highlighted limitations of functional css in general very quickly.
 
-1. Displaying user generated articles
+1. Displaying user-generated articles
 2. Hovers and animations
 
-### Limitation 1 - Displaying user generated articles
+### Limitation 1 - Displaying user-generated articles
 
 How could I expect a user to write an article and add margins to every paragraph?
 
@@ -298,7 +298,7 @@ Then I apply it where it is needed so it doesn't affect the entire site:
 
 ### Limitation 2 - Hovering and animations
 
-Animations are the life-blood of interactive websites. At a minimum, we need to hover and change things like colors of text and backgrounds on buttons. Okay, it's not essential, but great for user experience. So a new preonize function would be needed.
+Animations are the life-blood of interactive websites. At a minimum, we need to hover and change things like colours of text and backgrounds on buttons. Okay, it's not essential, but great for user experience. So a new preonize function would be needed.
 
 ```scss
 @mixin preonize-hover($name, $prop, $map, $breakpoints) {
@@ -338,7 +338,7 @@ After building a few sites, I had a problem. There were differences in the class
 }
 ```
 
-And what about colours? What's the convention? The colour first, or the modifier first?
+And what about the colours? What's the convention? The colour first, or the modifier first?
 
 ```css
 .dark-grey {
@@ -356,7 +356,7 @@ I had very few conventions and was mainly inspired by Tachyons. But switching be
 
 Looking up classes wasn't easy using my sass file. I had to find the CSS class, then look up the corresponding global style.
 
-I could look through the CSS, but then I thought, that's not a great user experience. If I could config my rules in yaml or JSON, I could generate documentation.
+I could look through the CSS, but then I thought, that's not great user experience. If I could config my rules in yaml or JSON, I could generate documentation.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Still my favorite <a href="https://twitter.com/hashtag/dev?src=hash&amp;ref_src=twsrc%5Etfw">#dev</a> discovery of the year. Cyrille&#39;s concepts on living documentation. <a href="https://t.co/psmtpI2czF">pic.twitter.com/psmtpI2czF</a></p>&mdash; Gemma Black (@GemmaBlackUK) <a href="https://twitter.com/GemmaBlackUK/status/1189968746800123905?ref_src=twsrc%5Etfw">October 31, 2019</a></blockquote>
 
@@ -471,7 +471,7 @@ It occurred to me. Why am I using an array of [properties](https://developer.moz
 
 Yaml linters highlight when you have duplicate properties in an object. It is not allowed. So that's a win in applying the convention.
 
-### Global vs standlone rules
+### Global vs standalone rules
 
 I also didn't like having to declare global rules for each CSS property. Sometimes rules only have to be applied once, eg. for display: flex
 
@@ -487,7 +487,7 @@ align-content:
     stretch: stretch
 ```
 
-vs colors:
+vs colours:
 
 ```yaml
 color:
@@ -499,9 +499,9 @@ background-color:
   rule: theme-colors
 ```
 
-### Generating documentations
+### Generating documentation
 
-Doing `preons config` would spit out JSON based on the preons.yaml to make creating documentations easier:
+Doing `preons config` would spit out JSON based on the preons.yaml to make creating documentation easier:
 
 ```json
 {
@@ -547,7 +547,7 @@ So I used Intuit's Auto. Running `npm run release` along with [Angular style com
 - bumps npm
 - tags the project
 - makes a release in GitHub
-- creates the change log
+- creates the changelog
 
 Done.
 
@@ -561,13 +561,13 @@ Here's a great intro to it:
 
 ### Lesson 7 - Keeping the cli and stylesheets core
 
-"I don't know any good reason to split my codebase between stylesheet and cli over multiplle repositories". So I package them together. Maybe this is bad. But until it becomes a problem, I decided to not worry about it.
+"I don't know any good reason to split my codebase between stylesheet and cli over multiple repositories". So I package them together. Maybe this is bad. But until it becomes a problem, I decided to not worry about it.
 
 It means, preons-theme 0.3.28 was released at the same time as the cli which is also 0.3.28, even if the cli didn't change.
 
 ### Lesson 8 - Skip the tests
 
-Now as of May 2020, there aren't any tests. There are no linters either. Dangerous? Maybe. But normally I'd fuss over assuring my code passes all sorts of code quality bells and whistles, not just because I'm a [badge junkie](https://shields.io/). This time, I was determined that version 0.0.z would just work and be functionable.
+Now as of May 2020, there aren't any tests. There are no linters either. Dangerous? Maybe. But normally I'd fuss over assuring my code passes all sorts of code quality bells and whistles, not just because I'm a [badge junkie](https://shields.io/). This time, I was determined that version 0.0.z would just work and be functional.
 
 I think [Eric Elliot](https://twitter.com/_ericelliott?lang=en) says [something](https://twitter.com/_ericelliott/status/1187063655533334529) like:
 
@@ -575,7 +575,7 @@ I think [Eric Elliot](https://twitter.com/_ericelliott?lang=en) says [something]
 - Make it stable
 - Make it fast
 
-Even though, he starts with tests, making it work is a lot more archaic for me. Make it stable is where tests come in and solidying them under the right design.
+Even though, he starts with tests, making it work is a lot more archaic for me. Make it stable is where tests come in and solidifying them under the right design.
 
 > “Coding faster: Make it work, then make it good” by Michael Parker https://link.medium.com/SRPxvd76F6
 
@@ -591,11 +591,11 @@ I genuinely think design comes before TDD and static type analysis. That's why J
 
 ### Lesson 9 - Design first
 
-I saw a [video](https://www.youtube.com/watch?v=mNeXuCYiE0U&t=19s) where [James Clear](https://jamesclear.com/goals-systems) talked about two sets of photography students. One group had to come up with the perfect photo, one time. Another group had to take lots of photos and present their best one. The latter scored better apparently because applying their knowledge came from trail and error, learning what worked through practice versus theorizing what worked. That _is_ pragmatism. Practice over theory.
+I saw a [video](https://www.youtube.com/watch?v=mNeXuCYiE0U&t=19s) where [James Clear](https://jamesclear.com/goals-systems) talked about two sets of photography students. One group had to come up with the perfect photo, one time. Another group had to take lots of photos and present their best one. The latter scored better apparently because applying their knowledge came from trial and error, learning what worked through practice versus theorizing what worked. That _is_ pragmatism. Practice over theory.
 
-My fear is, in our desire to follow best practice, we use tools that can hinder us at the wrong time. During the design phase, the learning phase, the prototyping phase, getting something to work is most important. Proving possibility is most important.
+My fear is, in our desire to follow best practice, we use tools that can hinder us at the wrong time. During the design phase, the learning phase, the prototyping phase, getting something to work is most important. Proving the possibility is most important.
 
-Now I've blitzed through the most basic if features, I have a choice:
+Now I've blitzed through the most basic of features, I have a choice:
 
 - to start firming up what I have with tests
 - try a different design
@@ -603,6 +603,6 @@ Now I've blitzed through the most basic if features, I have a choice:
 
 ## In conclusion
 
-I hope you enjoyed the article, or at least learned that your open source project doesn't have to be right the first time round. By no means am I a decent writer or even correct about everything in this article. So please share feedback.
+I hope you enjoyed the article or at least learned that your open source project doesn't have to be right the first time around. By no means am I a decent writer or even correct about everything in this article. So please share feedback.
 
 If you're on Twitter, just [@GemmaBlackUK](https://twitter.com/GemmaBlackUK) and tell me what I did wrong 😅.
