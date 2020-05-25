@@ -24,6 +24,7 @@
     "highlight.js": "^10.0.3",
     "node-sass": "^4.14.1",
     "nuxt": "^2.0.0",
+    "nuxt-bugsnag": "^4.0.1",
     "preons": "^0.3.22",
     "promise-polyfill": "^8.1.3",
     "reading-time": "^1.2.0",

@@ -73,7 +73,13 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     // https://content.nuxtjs.org/installation
-    '@nuxt/content'
+    '@nuxt/content',
+    // https://www.npmjs.com/package/nuxt-bugsnag
+    ['nuxt-bugsnag', {
+      config: {
+        apiKey: '5dc3d9bfc9eeaaf7918bad1055f13ed9'
+      },
+    }]
   ],
   /*
    ** Axios module configuration
