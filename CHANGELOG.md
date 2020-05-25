@@ -1,3 +1,19 @@
+# v0.0.52 (Mon May 25 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Gemma Black ([@gemmadlou](https://github.com/gemmadlou)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: first article draft - number 1 ([@gemmadlou](https://github.com/gemmadlou))
+
+#### Authors: 1
+
+- Gemma Black ([@gemmadlou](https://github.com/gemmadlou))
+
+---
+
 # v0.0.51 (Sun May 24 2020)
 
 :tada: This release contains work from a new contributor! :tada:
