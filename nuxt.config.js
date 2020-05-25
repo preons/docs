@@ -4,7 +4,8 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'Preons. Functional css',
+    title: 'A functional css system',
+    titleTemplate: '%s - Preons',
     meta: [{
         charset: 'utf-8'
       },

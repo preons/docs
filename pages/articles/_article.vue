@@ -30,7 +30,7 @@
           src="http://0.gravatar.com/avatar/2ffdfa89aaf6195cd438dc013fff12b2"
         />
         <a href="https://github.com/gemmadlou" class="mr-au ml1 grey fs-1 tdx">
-          Gemma Black
+          {{ page.author }}
         </a>
         <div class="fs-1">
           {{ page.date }}
@@ -49,6 +49,61 @@ import title from 'title'
 
 export default {
   layout: 'simple',
+
+  head() {
+    return {
+      title: this.page.title,
+      meta: [
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.page.title
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            (this.page.blurb || '') +
+            (this.page.blurb && this.page.author ? ' by ' : '') +
+            (this.page.author || '')
+        },
+        {
+          hid: `og:url`,
+          property: 'og:url',
+          content: 'https://preons.netlify.app//' + this.$route.fullPath
+        },
+        {
+          hid: `og:image`,
+          property: 'og:image',
+          content: this.page.image
+            ? 'https://preons.netlify.app/images/' + this.page.image
+            : 'https://preons.netlify.app/images/satellite.png'
+        },
+        {
+          hid: `og:description`,
+          property: 'og:description',
+          content: this.page.blurb || ''
+        },
+        {
+          hid: `twitter:title`,
+          name: 'twitter:title',
+          content: this.page.title
+        },
+        {
+          hid: `twitter:card`,
+          property: 'twitter:card',
+          content: this.page.image
+            ? 'https://preons.netlify.app/images/' + this.page.image
+            : 'https://preons.netlify.app/images/satellite.png'
+        },
+        {
+          hid: `twitter:description`,
+          property: 'twitter:description',
+          content: this.page.blurb || ''
+        }
+      ]
+    }
+  },
   async asyncData({ $content, params }) {
     const page = await $content('articles', params.article).fetch()
     let headings = page.body.children
