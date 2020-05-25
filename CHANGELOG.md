@@ -1,3 +1,20 @@
+# v0.0.53 (Mon May 25 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Gemma Black ([@gemmadlou](https://github.com/gemmadlou)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: add bugsnag ([@gemmadlou](https://github.com/gemmadlou))
+- fix: making preons, 2nd draft ([@gemmadlou](https://github.com/gemmadlou))
+
+#### Authors: 1
+
+- Gemma Black ([@gemmadlou](https://github.com/gemmadlou))
+
+---
+
 # v0.0.52 (Mon May 25 2020)
 
 :tada: This release contains work from a new contributor! :tada:
