@@ -8,10 +8,7 @@
         src="/images/space.jpeg"
       />
       <!-- Image overlay -->
-      <span
-        v-if="spaceBg"
-        class="bg-hotpink absolute t0 l0 w-100 h-100 o-10 z-1"
-      ></span>
+      <span v-if="spaceBg" class="bg-hotpink absolute t0 l0 w-100 h-100 o-10 z-1"></span>
     </div>
     <div
       class="df justify-between justify-end-m items-center pa1 pl2-m pr2-m z-2 absolute t0 w-100"
@@ -20,36 +17,20 @@
         <h1>Preons</h1>
       </a>
 
-      <nuxt-link to="/articles" class="dn dib-m tdx mr1 white relative">
-        Articles
-      </nuxt-link>
+      <nuxt-link to="/articles" class="dn dib-m tdx mr1 white relative">Articles</nuxt-link>
 
-      <nuxt-link to="/learn" class="dn dib-m tdx white mr1 relative">
-        Learn
-      </nuxt-link>
+      <nuxt-link to="/learn" class="dn dib-m tdx white mr1 relative">Learn</nuxt-link>
 
-      <nuxt-link to="/search" class="dn dib-m tdx white mr1 relative">
-        Reference
-      </nuxt-link>
+      <nuxt-link to="/search" class="dn dib-m tdx white mr1 relative">Reference</nuxt-link>
 
-      <a
-        href="https://github.com/preons/preons"
-        class="dn dib-m tdx hotpink mr1 relative"
-      >
-        GitHub
-      </a>
+      <a href="https://github.com/preons/preons" class="dn dib-m tdx hotpink mr1 relative">GitHub</a>
 
       <nuxt-link
         to="/search"
         class="dn-m relative mr-xxsmall ml-au ml0-m"
         title="Search functional css classes and their related css properties"
       >
-        <img
-          alt="Search button"
-          src="/icons/search-white.svg"
-          height="24"
-          width="24"
-        />
+        <img alt="Search button" src="/icons/search-white.svg" height="24" width="24" />
       </nuxt-link>
 
       <div class="dn-m" v-on:click="showMenu">
@@ -62,9 +43,7 @@
     <div v-if="menu" class="fixed l0 t0 w-100 h-100 z-3">
       <span class="bg-white absolute t0 l0 w-100 h-100 o-100 z0"></span>
 
-      <div
-        class=" pa1 df justify-between items-center relative lh0 z-1 bca-greyll bsa-solid bwb1"
-      >
+      <div class="pa1 df justify-between items-center relative lh0 z-1 bca-greyll bsa-solid bwb1">
         <a href="/" class="hotpink tdx relative">
           <h1>Preons</h1>
         </a>
@@ -78,32 +57,19 @@
 
       <ul class="greyd relative fwl ls1">
         <li>
-          <nuxt-link
-            class="pa1 bca-greyll bsa-solid bwb1 db greyd tdx"
-            to="/learn"
-            >Learn</nuxt-link
-          >
+          <nuxt-link class="pa1 bca-greyll bsa-solid bwb1 db greyd tdx" to="/learn">Learn</nuxt-link>
         </li>
         <li>
-          <nuxt-link
-            class="pa1 bca-greyll bsa-solid bwb1 db greyd tdx"
-            to="/articles"
-            >Articles</nuxt-link
-          >
+          <nuxt-link class="pa1 bca-greyll bsa-solid bwb1 db greyd tdx" to="/articles">Articles</nuxt-link>
         </li>
         <li>
-          <nuxt-link
-            class="pa1 bca-greyll bsa-solid bwb1 db greyd tdx"
-            to="/search"
-            >Reference</nuxt-link
-          >
+          <nuxt-link class="pa1 bca-greyll bsa-solid bwb1 db greyd tdx" to="/search">Reference</nuxt-link>
         </li>
         <li>
           <a
             class="pa1 bca-greyll bsa-solid bwb1 db hotpink tdx"
             href="https://github.com/preons/preons"
-            >GitHub</a
-          >
+          >GitHub</a>
         </li>
       </ul>
     </div>
@@ -146,6 +112,11 @@ export default {
 
 <style lang="scss">
 @import '~preons/dist/preons';
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
 
 .s-article {
   @extend .lh0;
