@@ -101,7 +101,7 @@ export default {
     }
   },
   async asyncData({ $content, params }) {
-    const page = await $content(`learn/${params.article}`).fetch()
+    const page = await $content(`learn/ui/${params.index || 'index'}`).fetch()
     const learn = await $content('learn').fetch()
     const learnUi = await $content('learn/ui').fetch()
     const learnCli = await $content('learn/cli').fetch()

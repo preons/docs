@@ -120,9 +120,10 @@ module.exports = {
       const articles = await $content('articles')
         .only(['path'])
         .fetch()
-      const learn = await $content('learn')
-        .only(['path'])
-        .fetch()
+      // const learn = await $content('learn')
+      //   .only(['path'])
+      //   .fetch()
+        // console.log(learn)
 
       const cli = await $content('learn/cli')
       .only(['path'])
@@ -131,7 +132,7 @@ module.exports = {
       const ui = await $content('learn/ui')
         .only(['path'])
         .fetch()
-      return [].concat(articles, learn, cli, ui).map((file) => (file.path === '/index' ? '/' : file.path))
+      return [].concat(articles, cli, ui).map((file) => (file.path === '/index' ? '/' : file.path))
     }
   }
 }
