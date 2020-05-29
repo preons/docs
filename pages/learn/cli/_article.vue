@@ -90,7 +90,7 @@ export default {
     }
   },
   async asyncData({ $content, params }) {
-    const page = await $content('learn/index').fetch()
+    const page = await $content('learn/cli', params.article).fetch()
     let headings = page.body.children
       .filter((i) => i.tag === 'h2' || i.tag === 'h3' || i.tag === 'h4')
       .map((i) => ({
