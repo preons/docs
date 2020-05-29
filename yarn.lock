@@ -9906,9 +9906,9 @@ prelude-ls@~1.1.2:
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
 preons@^0.3.22:
-  version "0.3.34"
-  resolved "https://registry.yarnpkg.com/preons/-/preons-0.3.34.tgz#5990f7b9fe4bb98daf671da6bab6bbf9038f33c8"
-  integrity sha512-2ichr/jFPje8lxnM5gFJhtwg82AWeCR+49suMu9DHyWWVZCN9cYr+2q51J8ptsjGTv+HnbEVm61m3/OiDLL02A==
+  version "0.3.37"
+  resolved "https://registry.yarnpkg.com/preons/-/preons-0.3.37.tgz#91dfac93d7cd57eaad7d7c371536f79483caa7a6"
+  integrity sha512-jlUPeq88blOe2czF7Iy7sSlWdFuD8DDwTbkEWxKLqsAOLkVCcoZnZVeSUI7TQ8pITHj4FcwkV1iaFaGO0qgZzg==
   dependencies:
     command-line-args "^5.1.1"
     commander "^5.1.0"

@@ -20,7 +20,7 @@ Install the Preons CLI globally.
 npm i preons -g
 ```
 
-### Yarn
+### Yarn
 
 ```bash
 yarn global add preons

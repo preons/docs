@@ -235,6 +235,7 @@ body {
   }
 
   .nuxt-content-highlight {
+    @extend .mb1;
     @extend .w-100;
     overflow-x: hidden;
   }

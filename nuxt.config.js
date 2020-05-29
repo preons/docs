@@ -6,7 +6,8 @@ module.exports = {
   head: {
     title: 'A functional css system',
     titleTemplate: '%s - Preons',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -19,14 +20,16 @@ module.exports = {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{
+    link: [
+      {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@200;400;500;600;700&display=swap'
+        href:
+          'https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@200;400;500;600;700&display=swap'
       },
       {
         rel: 'stylesheet',
@@ -34,7 +37,8 @@ module.exports = {
       },
       {
         rel: 'stylesheet',
-        href: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css'
+        href:
+          '//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css'
       }
     ]
   },
@@ -59,9 +63,12 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module',
     // Doc: https://pwa.nuxtjs.org/
-    ['@nuxtjs/pwa', {
-      workbox: false
-    }],
+    [
+      '@nuxtjs/pwa',
+      {
+        workbox: false
+      }
+    ]
   ],
   /*
    ** Nuxt.js modules
@@ -74,11 +81,14 @@ module.exports = {
     // https://content.nuxtjs.org/installation
     '@nuxt/content',
     // https://www.npmjs.com/package/nuxt-bugsnag
-    ['nuxt-bugsnag', {
-      config: {
-        apiKey: '5dc3d9bfc9eeaaf7918bad1055f13ed9'
-      },
-    }]
+    [
+      'nuxt-bugsnag',
+      {
+        config: {
+          apiKey: '5dc3d9bfc9eeaaf7918bad1055f13ed9'
+        }
+      }
+    ]
   ],
   /*
    ** Axios module configuration
@@ -102,15 +112,15 @@ module.exports = {
     }
   },
   /**
-   * 
+   *
    */
   generate: {
     async routes() {
-      const {
-        $content
-      } = require('@nuxt/content')
-      const files = await $content('articles').only(['path']).fetch()
-      return files.map(file => file.path === '/index' ? '/' : file.path)
+      const { $content } = require('@nuxt/content')
+      const files = await $content('articles')
+        .only(['path'])
+        .fetch()
+      return files.map((file) => (file.path === '/index' ? '/' : file.path))
     }
   }
 }

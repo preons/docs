@@ -1,21 +1,20 @@
 <template>
-  <div class="relative greyd bg-white df-m">
+  <div class="relative greyd bg-white df-m bg-greyll">
     <div class="dn db-m maxw-xxbig-m w-100"></div>
     <div
-      class="bg-greyll dn db-m w-xxbig-m mb12-m mt0-m   pr0-m relative scroll-m fixed-m h-100"
+      class="bg-greyll dn db-m w-xxbig-m mb12-m mt0-m pr0-m relative scroll-m fixed-m h-100"
     >
-      <ul>
-        <li class="bcb-greyl bwb1 bsa-solid">
-          <a class="hotpink pa1 tdx db" href="#">{{ page.title }}</a>
-        </li>
-        <li class="bcb-greyl bwb1 bsa-solid" v-for="heading in headings">
-          <a class="hotpink pa1 tdx db" :href="heading.link">{{
-            heading.name
-          }}</a>
+      <ul class="lh0">
+        <li class="bcb-bluel bwb1 bsa-solid" v-for="article in articles">
+          <a class="hotpink pl2 pa1 tdx db" :href="article.path">
+            {{ article.category || '' }} {{ article.title || article.slug }}
+          </a>
         </li>
       </ul>
     </div>
-    <div class="pa1 pt3 pl2-m pr2-m pb2-m relative maxw-xsuper minw0">
+    <div
+      class="bg-white pa1 pt3 pl2-m pr2-m pb2-m relative maxw-xsuper minw0 w-100 shrink-20"
+    >
       <div class="s-article">
         <h1>
           {{ page.title }}
@@ -26,6 +25,18 @@
       <div class="s-article">
         <nuxt-content :document="page" />
       </div>
+    </div>
+    <div class=" dn db-l w-xxbig-m mb12-m mt0-m pr0-m scroll-m relative h-100 w-100 maxw-xxbig-m">
+      <ul class="fixed lh0 w-100">
+        <li class="bca-bluel bwb1 bwr1 bsa-solid">
+          <a class="hotpink pa1 tdx db" href="#">{{ page.title }}</a>
+        </li>
+        <li class="bca-bluel bwb1 bwr1 bsa-solid" v-for="heading in headings">
+          <a class="hotpink pa1 tdx db" :href="heading.link">
+            {{ heading.name }}
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -90,8 +101,11 @@ export default {
     }
   },
   async asyncData({ $content, params }) {
-    const page = await $content('learn/cli', params.article).fetch()
-    let headings = page.body.children
+    const page = await $content(`learn/${params.article}/${params.sub_article || 'index'}`).fetch()
+    const learn = await $content('learn').fetch()
+    const learnUi = await $content('learn/ui').fetch()
+    const learnCli = await $content('learn/cli').fetch()
+    let headings = page && page.body && page.body.children && page.body.children
       .filter((i) => i.tag === 'h2' || i.tag === 'h3' || i.tag === 'h4')
       .map((i) => ({
         link: '#' + i.props.id,
@@ -99,7 +113,11 @@ export default {
       }))
     return {
       page,
-      headings
+      headings,
+      articles: [].concat(learn, learnUi, learnCli).map(article => ({
+        ...article,
+        category: article.dir.match(/^\/[a-z]+\/([a-z]+)$/) ? article.dir.match(/^\/[a-z]+\/([a-z]+)$/)[1] + ': ' : null
+      }))
     }
   }
 }
