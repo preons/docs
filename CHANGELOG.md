@@ -1,3 +1,19 @@
+# v0.0.60 (Fri May 29 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Gemma Black ([@gemmadlou](https://github.com/gemmadlou)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: netlift redirects ([@gemmadlou](https://github.com/gemmadlou))
+
+#### Authors: 1
+
+- Gemma Black ([@gemmadlou](https://github.com/gemmadlou))
+
+---
+
 # v0.0.59 (Fri May 29 2020)
 
 :tada: This release contains work from a new contributor! :tada:
