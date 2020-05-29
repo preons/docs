@@ -1,3 +1,21 @@
+# v0.0.58 (Fri May 29 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Gemma Black ([@gemmadlou](https://github.com/gemmadlou)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: nested routes for dynamic articles ([@gemmadlou](https://github.com/gemmadlou))
+- fix: moving articles to markdown files ([@gemmadlou](https://github.com/gemmadlou))
+- fix: prevent horizontal overflow and scroll ([@gemmadlou](https://github.com/gemmadlou))
+
+#### Authors: 1
+
+- Gemma Black ([@gemmadlou](https://github.com/gemmadlou))
+
+---
+
 # v0.0.57 (Wed May 27 2020)
 
 :tada: This release contains work from a new contributor! :tada:
