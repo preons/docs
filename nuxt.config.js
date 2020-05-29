@@ -117,10 +117,21 @@ module.exports = {
   generate: {
     async routes() {
       const { $content } = require('@nuxt/content')
-      const files = await $content('articles')
+      const articles = await $content('articles')
         .only(['path'])
         .fetch()
-      return files.map((file) => (file.path === '/index' ? '/' : file.path))
+      const learn = await $content('learn')
+        .only(['path'])
+        .fetch()
+
+      const cli = await $content('learn/cli')
+      .only(['path'])
+      .fetch()
+
+      const ui = await $content('learn/ui')
+        .only(['path'])
+        .fetch()
+      return [].concat(articles, learn, cli, ui).map((file) => (file.path === '/index' ? '/' : file.path))
     }
   }
 }
