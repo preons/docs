@@ -116,7 +116,9 @@ export default {
       headings,
       articles: [].concat(learn, learnUi, learnCli).map(article => ({
         ...article,
-        category: article.dir.match(/^\/[a-z]+\/([a-z]+)$/) ? article.dir.match(/^\/[a-z]+\/([a-z]+)$/)[1] + ': ' : null
+        path: article.path.replace('/home', ''),
+        category: article.dir.match(/^\/[a-z]+\/([a-z]+)$/) 
+          ? article.dir.match(/^\/[a-z]+\/([a-z]+)$/)[1] + ': ' : null
       }))
     }
   }

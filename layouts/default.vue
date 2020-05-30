@@ -18,7 +18,7 @@
       </a>
 
       <nuxt-link to="/articles" class="dn dib-m tdx mr1 white relative">Articles</nuxt-link>
-
+  
       <nuxt-link to="/learn" class="dn dib-m tdx white mr1 relative">Learn</nuxt-link>
 
       <nuxt-link to="/search" class="dn dib-m tdx white mr1 relative">Reference</nuxt-link>
@@ -85,13 +85,13 @@
 export default {
   watch: {
     $route(app) {
-      this.spaceBg =
-        this.$route.name === 'index' || this.$route.name === 'search'
+      // this.spaceBg =
+      //   this.$route.name === 'index' || this.$route.name === 'search'
       this.menu = false
     }
   },
   mounted() {
-    this.spaceBg = this.$route.name === 'index' || this.$route.name === 'search'
+    // this.spaceBg = this.$route.name === 'index' || this.$route.name === 'search'
   },
   data() {
     return {
