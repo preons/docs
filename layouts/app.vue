@@ -1,5 +1,6 @@
 <template>
   <div class="ff-raleway h-100vh">
+    <div v-on:click="toggleMenu" class="fixed h2 w2 bg-grey b4 l0"></div>
     <div v-on:click="toggleMenu" class="fixed h2 w2 bg-black b2 l0"></div>
     <div v-if="menu" class=""></div>
     <nuxt />

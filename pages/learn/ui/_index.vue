@@ -1,35 +1,36 @@
 <template>
   <div class="relative greyd bg-white df-m bg-greyll">
-    <div class="dn db-m maxw-xxbig-m w-100"></div>
-    <div
-      class="bg-greyll dn db-m w-xxbig-m mb12-m mt0-m pr0-m relative scroll-m fixed-m h-100"
-    >
-      <ul class="lh0">
-        <li class v-for="article in articles">
-          <span
-            v-if="article.name"
-            class="grey bg-hotpinkll pl2 pa-thin fwb tdx db bcb-bluel bwb1 bsa-solid"
-            >{{ article.name }}</span
-          >
-          <a
-            v-for="link in article.links"
-            :key="link.path"
-            :class="[
-              'pointer',
-              'hotpink',
-              article.name ? 'pl3' : 'pl2',
-              'pa-xsmall',
-              'tdx',
-              'db',
-              'bcb-bluel',
-              'bwb1',
-              'bsa-solid'
-            ]"
-            :href="link.path"
-            >{{ link.title || link.slug }}</a
-          >
-        </li>
-      </ul>
+    <div class="relative w-xxbig-m">
+      <div
+        class="bg-greyll dn db-m w-xxbig-m mb12-m mt0-m pr0-m relative scroll-m fixed-m h-100"
+      >
+        <ul class="lh0">
+          <li class v-for="article in articles">
+            <span
+              v-if="article.name"
+              class="grey bg-hotpinkll pl2 pa-thin fwb tdx db bcb-bluel bwb1 bsa-solid"
+              >{{ article.name }}</span
+            >
+            <a
+              v-for="link in article.links"
+              :key="link.path"
+              :class="[
+                'pointer',
+                'hotpink',
+                article.name ? 'pl3' : 'pl2',
+                'pa-xsmall',
+                'tdx',
+                'db',
+                'bcb-bluel',
+                'bwb1',
+                'bsa-solid'
+              ]"
+              :href="link.path"
+              >{{ link.title || link.slug }}</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
     <div
       class="bg-white pa1 pt3 pl2-m pr2-m pb2-m relative maxw-xsuper minw0 w-100 shrink-20"

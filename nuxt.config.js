@@ -129,7 +129,6 @@ module.exports = {
         .map((file) => (file.path === '/index' ? '/' : file.path))
     }
   },
-
   /**
    * Use babel
    */

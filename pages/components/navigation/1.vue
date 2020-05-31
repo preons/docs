@@ -46,7 +46,7 @@
       </div>
       <div class="dn dib-m">
         <div class="dib mr2">Sign in</div>
-        <button class="bg-black pa-xsmall pl2 pr2 bwc-tranparent white">
+        <button class="bg-black pa-xsmall pl2 pr2 bca-transparent white">
           Join
         </button>
       </div>
