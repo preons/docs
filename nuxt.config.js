@@ -6,8 +6,7 @@ module.exports = {
   head: {
     title: 'A functional css system',
     titleTemplate: '%s - Preons',
-    meta: [
-      {
+    meta: [{
         charset: 'utf-8'
       },
       {
@@ -20,25 +19,18 @@ module.exports = {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [
-      {
+    link: [{
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
       },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@200;400;500;600;700&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@200;400;500;600;700&display=swap'
       },
       {
         rel: 'stylesheet',
-        href: 'https://unpkg.com/preons/dist/reset.css'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          '//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css'
+        href: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css'
       }
     ]
   },
@@ -95,8 +87,8 @@ module.exports = {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
-  /*
-   ** Build configuration
+  /**
+   * Build configuration
    */
   build: {
     extractCSS: true,
@@ -112,22 +104,20 @@ module.exports = {
     }
   },
   /**
-   *
+   * Generate routes
    */
   generate: {
     async routes() {
-      const { $content } = require('@nuxt/content')
+      const {
+        $content
+      } = require('@nuxt/content')
       const articles = await $content('articles')
         .only(['path'])
         .fetch()
-      // const learn = await $content('learn')
-      //   .only(['path'])
-      //   .fetch()
-        // console.log(learn)
 
       const cli = await $content('learn/cli')
-      .only(['path'])
-      .fetch()
+        .only(['path'])
+        .fetch()
 
       const ui = await $content('learn/ui')
         .only(['path'])

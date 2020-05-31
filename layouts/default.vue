@@ -14,11 +14,11 @@
       class="df justify-between justify-end-m items-center pa1 pl2-m pr2-m z-2 absolute t0 w-100"
     >
       <a href="/" class="white tdx relative mr-au">
-        <h1>Preons</h1>
+        <h1>🛰 Preons</h1>
       </a>
 
       <nuxt-link to="/articles" class="dn dib-m tdx mr1 white relative">Articles</nuxt-link>
-  
+
       <nuxt-link to="/learn" class="dn dib-m tdx white mr1 relative">Learn</nuxt-link>
 
       <nuxt-link to="/search" class="dn dib-m tdx white mr1 relative">Reference</nuxt-link>
@@ -45,7 +45,7 @@
 
       <div class="pa1 df justify-between items-center relative lh0 z-1 bca-greyll bsa-solid bwb1">
         <a href="/" class="hotpink tdx relative">
-          <h1>Preons</h1>
+          <h1>🛰 Preons</h1>
         </a>
 
         <div class="dn-m" v-on:click="hideMenu">
@@ -111,6 +111,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~preons/dist/reset';
 @import '~preons/dist/preons';
 
 body {
@@ -168,8 +169,15 @@ body {
     @extend .lh0;
     @extend .ml2;
     @extend .mr2;
-    @extend .lst-disc;
     @extend .mr4-m;
+  }
+
+  ul {
+    @extend .lst-disc;
+  }
+
+  ol {
+    list-style: decimal;
   }
 
   a {

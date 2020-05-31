@@ -4,7 +4,7 @@
       class="df justify-between justify-end-m items-center pa1 pl2-m pr2-m z-2 t0 w-100 fixed bg-white bwb1 bsa-solid bca-greyll"
     >
       <a href="/" class="black tdx relative mr-au">
-        <h1>Preons</h1>
+        <h1>🛰 Preons</h1>
       </a>
 
       <nuxt-link to="/articles" class="dn dib-m tdx mr1 black relative">Articles</nuxt-link>
@@ -35,7 +35,7 @@
 
       <div class="pa1 df justify-between items-center relative lh0 z-1 bca-greyll bsa-solid bwb1">
         <a href="/" class="hotpink tdx relative">
-          <h1>Preons</h1>
+          <h1>🛰 Preons</h1>
         </a>
 
         <div class="dn-m" v-on:click="hideMenu">

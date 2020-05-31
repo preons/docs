@@ -1,5 +1,5 @@
 ---
-title: Generate your own
+title: Generate your own library
 blurb: The Preons cli along with the preons.yaml allows you to customise your own functional css library
 author: Gemma Black
 ---
@@ -16,9 +16,9 @@ preons -V
 
 Generating a stylesheet is a combination of two steps:
 
-1) Creating a `preons.yaml` configuration file.
+1. Creating a `preons.yaml` configuration file.
 
-2) Generating css from that configuration file.
+2. Generating css from that configuration file.
 
 Just to show both steps at once, you're just going to downlooad the file and create the library.
 
@@ -58,7 +58,7 @@ preons:
     # Stylesheet breakpoints
 ```
 
-### Properties
+### Properties
 
 Properties are where you define your css properties, eg. `background-color` and `margin-left`. You can only define a css property once otherwise the preons.yaml will not convert to css.
 
@@ -89,13 +89,12 @@ Sometimes you find yourself typing the same rules over and over again. Whilst th
 
 ```yaml
 preons:
-
   rules:
     theme-colors:
-      black: "#242027"
-      white: "#fefeff"
-      grey: "#7d778e"
-      hotpink: "#ea2889"
+      black: '#242027'
+      white: '#fefeff'
+      grey: '#7d778e'
+      hotpink: '#ea2889'
 
   properties:
     background-color:
