@@ -1,3 +1,26 @@
+# v0.0.61 (Sun May 31 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Gemma Black ([@gemmadlou](https://github.com/gemmadlou)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: create first example component - responsive navigation ([@gemmadlou](https://github.com/gemmadlou))
+- fix: remove codeblocks as @nuxt/content provides syntax highlighting ([@gemmadlou](https://github.com/gemmadlou))
+- fix: improve structure of documentations learn section ([@gemmadlou](https://github.com/gemmadlou))
+- fix: learn home page ([@gemmadlou](https://github.com/gemmadlou))
+- fix: generate route categories manually ([@gemmadlou](https://github.com/gemmadlou))
+- fix: redirect instead of rewrite ([@gemmadlou](https://github.com/gemmadlou))
+- fix: move _redirects config to static folder as not in dist on netlify ([@gemmadlou](https://github.com/gemmadlou))
+- fix: redirect html for lean page on netlify ([@gemmadlou](https://github.com/gemmadlou))
+
+#### Authors: 1
+
+- Gemma Black ([@gemmadlou](https://github.com/gemmadlou))
+
+---
+
 # v0.0.60 (Fri May 29 2020)
 
 :tada: This release contains work from a new contributor! :tada:
