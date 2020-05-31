@@ -6,7 +6,8 @@ module.exports = {
   head: {
     title: 'A functional css system',
     titleTemplate: '%s - Preons',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -19,18 +20,21 @@ module.exports = {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{
+    link: [
+      {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@200;400;500;600;700&display=swap'
+        href:
+          'https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@200;400;500;600;700&display=swap'
       },
       {
         rel: 'stylesheet',
-        href: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css'
+        href:
+          '//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css'
       }
     ]
   },
@@ -108,9 +112,7 @@ module.exports = {
    */
   generate: {
     async routes() {
-      const {
-        $content
-      } = require('@nuxt/content')
+      const { $content } = require('@nuxt/content')
       const articles = await $content('articles')
         .only(['path'])
         .fetch()
@@ -122,7 +124,29 @@ module.exports = {
       const ui = await $content('learn/ui')
         .only(['path'])
         .fetch()
-      return [].concat(articles, cli, ui).map((file) => (file.path === '/index' ? '/' : file.path))
+      return []
+        .concat(articles, cli, ui)
+        .map((file) => (file.path === '/index' ? '/' : file.path))
+    }
+  },
+
+  /**
+   * Use babel
+   */
+  babel: {
+    presets({ envName }) {
+      const envTargets = {
+        client: { browsers: ['last 2 versions', 'iOS >= 8', 'Safari >= 8'] },
+        server: { node: 'current' }
+      }
+      return [
+        [
+          '@nuxt/babel-preset-app',
+          {
+            targets: envTargets[envName]
+          }
+        ]
+      ]
     }
   }
 }

@@ -1,23 +1,39 @@
 <template>
   <div class="relative greyd bg-white df-m bg-greyll">
     <div class="dn db-m maxw-xxbig-m w-100"></div>
-    <div class="bg-greyll dn db-m w-xxbig-m mb12-m mt0-m pr0-m relative scroll-m fixed-m h-100">
+    <div
+      class="bg-greyll dn db-m w-xxbig-m mb12-m mt0-m pr0-m relative scroll-m fixed-m h-100"
+    >
       <ul class="lh0">
         <li class v-for="article in articles">
           <span
             v-if="article.name"
             class="grey bg-hotpinkll pl2 pa-thin fwb tdx db bcb-bluel bwb1 bsa-solid"
-          >{{ article.name }}</span>
+            >{{ article.name }}</span
+          >
           <a
             v-for="link in article.links"
             :key="link.path"
-            :class="['pointer', 'hotpink', article.name ? 'pl3' : 'pl2', 'pa-xsmall', 'tdx', 'db', 'bcb-bluel', 'bwb1', 'bsa-solid']"
+            :class="[
+              'pointer',
+              'hotpink',
+              article.name ? 'pl3' : 'pl2',
+              'pa-xsmall',
+              'tdx',
+              'db',
+              'bcb-bluel',
+              'bwb1',
+              'bsa-solid'
+            ]"
             :href="link.path"
-          >{{ link.title || link.slug }}</a>
+            >{{ link.title || link.slug }}</a
+          >
         </li>
       </ul>
     </div>
-    <div class="bg-white pa1 pt3 pl2-m pr2-m pb2-m relative maxw-xsuper minw0 w-100 shrink-20">
+    <div
+      class="bg-white pa1 pt3 pl2-m pr2-m pb2-m relative maxw-xsuper minw0 w-100 shrink-20"
+    >
       <div class="s-article">
         <h1>
           {{ page.title }}
@@ -29,16 +45,22 @@
         <nuxt-content :document="page" />
       </div>
     </div>
-    <div class="dn db-l w-xxbig-m mb12-m mt0-m pr0-m scroll-m relative h-100 w-100 maxw-xxbig-m">
+    <div
+      class="dn db-l w-xxbig-m mb12-m mt0-m pr0-m scroll-m relative h-100 w-100 maxw-xxbig-m"
+    >
       <ul class="fixed lh0 w-100">
         <li class="bca-bluel bwb1 bwr1 bsa-solid">
-          <a class="grey bg-greyl pl2 pa-xsmall tdx db tfu" href="#">Table of contents</a>
+          <a class="grey bg-greyl pl2 pa-xsmall tdx db tfu" href="#"
+            >Table of contents</a
+          >
         </li>
         <li class="bca-bluel bwb1 bwr1 bsa-solid">
           <a class="hotpink pl2 pa-xsmall tdx db" href="#">{{ page.title }}</a>
         </li>
         <li class="bca-bluel bwb1 bwr1 bsa-solid" v-for="heading in headings">
-          <a class="hotpink pl2 pa-xsmall tdx db" :href="heading.link">{{ heading.name }}</a>
+          <a class="hotpink pl2 pa-xsmall tdx db" :href="heading.link">{{
+            heading.name
+          }}</a>
         </li>
       </ul>
     </div>

@@ -1,5 +1,5 @@
 ---
-title: 💫 Build
+title: 🏠 Build
 blurb: Get started quickly with building the UI
 ---
 

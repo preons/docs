@@ -1,7 +1,7 @@
 <template>
-  <div class="relative greyd bg-white df-m">
-    <div class="bg-greyll dn db-m w-xxbig-m mb12-m mt0-m pr0-m relative scroll-m fixed-m h-100">
-      <ul class="lh0">
+  <div class="relative greyd df-m justify-stretch">
+    <div class="dn db-m w-xxbig-m mb12-m mt0-m pr0-m relative scroll-m">
+      <ul class="lh0 h-100vh bg-greyll fixed w-xxbig-m">
         <li class v-for="article in articles">
           <nuxt-link
             :to="article.path"
@@ -10,12 +10,16 @@
         </li>
       </ul>
     </div>
-    <div class="pa1 pt2 pl2-m pr2-m pb2-m relative w-100 maxw-xxxsuper ml-au mr-au s-article">
+    <div
+      class="minw0 pa1 pt2 pl2-m pr2-m pb2-m relative w-100 maxw-xxxsuper ml-au mr-au s-article shrink-20"
+    >
       <h1>Articles</h1>
       <p>
         More articles to come. If you're interested in how Preons
         got started, check out
-        <a href="/articles/making-preons">Making Preons</a>
+        <a
+          href="/articles/making-preons"
+        >Making Preons</a>
       </p>
     </div>
   </div>
