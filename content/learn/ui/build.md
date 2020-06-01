@@ -51,6 +51,10 @@ Now you've gotten setup. The first thing we'll add is the navigation. I'll let y
 
 ## What does your version look like
 
+Here's what I got.
+
+> https://repl.it/@gemmadlou/Starter-End-Example#index.html
+
 ## The Reference
 
 Functional CSS will seem cryptic, at least at first. Use the [reference](/search) to know what to create.
