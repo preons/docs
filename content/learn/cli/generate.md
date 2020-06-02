@@ -1,5 +1,5 @@
 ---
-title: Generate your own library
+title: ⚡️ Generate your own library
 blurb: The Preons cli along with the preons.yaml allows you to customise your own functional css library
 author: Gemma Black
 ---
