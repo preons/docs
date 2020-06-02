@@ -5,7 +5,7 @@
       class="absolute w-100 h-100 of-cover l0 t0"
     />
     <span class="absolute l0 t0 w-100 h-100 bg-black o-50"></span>
-    <div class="maxw-xxxsuper center ml-au mr-au relative greyll">
+    <div class="maxw-xxxsuper center ml-au mr-au relative greyxl">
       <p class="fs0 lh0 tfu mb1 fs1-m">Elon Musk</p>
       <h1 class="fs2 lh2 maxw-xxxbig ml-au mr-au fs5-m lh5-m maxw-xxsuper-m">
         If things are not failing you are not innovating enough.

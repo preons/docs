@@ -70,7 +70,7 @@ body {
     @extend .fwb;
     @extend .bwb1;
     @extend .bsb-solid;
-    @extend .bca-greyll;
+    @extend .bca-greyxl;
     @extend .lh4-m;
 
     &:first-child {
@@ -120,14 +120,14 @@ body {
   }
 
   mark {
-    @extend .bg-greyll;
+    @extend .bg-greyxl;
     @extend .dib;
     @extend .black;
     @extend .pa-thin;
   }
 
   blockquote {
-    @extend .bg-greyll;
+    @extend .bg-greyxl;
     @extend .pa2;
     @extend .pt1;
     @extend .pb1;
@@ -146,7 +146,7 @@ body {
   }
 
   img[src*='#boxed'] {
-    @extend .bg-greyll;
+    @extend .bg-greyxl;
     @extend .pa1;
     @extend .pa2-m;
   }
@@ -163,7 +163,7 @@ body {
       @extend .pa-xxsmall;
       @extend .pl-small;
       @extend .pr-small;
-      @extend .bg-greyll;
+      @extend .bg-greyxl;
     }
   }
 

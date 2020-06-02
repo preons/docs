@@ -282,7 +282,7 @@ Here's a snippet I use for this Preons' documentations website:
     @extend .fwb;
     @extend .bwb1;
     @extend .bsb-solid;
-    @extend .bca-greyll;
+    @extend .bca-greyxl;
     @extend .lh4-m;
   }
 }
@@ -511,7 +511,7 @@ Doing `preons config` would spit out JSON based on the preons.yaml to make creat
     "values": {
       "black": "#242027",
       "white": "#fefeff",
-      "greyll": "#f6f5f9",
+      "greyxl": "#f6f5f9",
       "greyl": "#beb9cc",
       "grey": "#7d778e",
       "greyd": "#47454c",
@@ -521,7 +521,7 @@ Doing `preons config` would spit out JSON based on the preons.yaml to make creat
     "mappings": {
       "bct-black": "#242027",
       "bct-white": "#fefeff",
-      "bct-greyll": "#f6f5f9",
+      "bct-greyxl": "#f6f5f9",
       "bct-greyl": "#beb9cc",
       "bct-grey": "#7d778e",
       "bct-greyd": "#47454c",

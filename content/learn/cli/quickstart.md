@@ -28,7 +28,7 @@ preons:
     theme-colors:
       black: '#242027'
       white: '#fefeff'
-      greyll: '#f6f5f9'
+      greyxl: '#f6f5f9'
   ## ...
 ```
 

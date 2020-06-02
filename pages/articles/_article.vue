@@ -12,11 +12,13 @@
         </li>
       </ul>
     </div>
-    <div class="pa1 pt2 pl2-m pr2-m pb2-m relative maxw-xsuper w-100 ml-xxbig-m">
+    <div
+      class="pa1 pt2 pl2-m pr2-m pb2-m relative maxw-xsuper w-100 ml-xxbig-m"
+    >
       <div class="s-article">
         <h1>
           {{ page.title }}
-          <span class="h-wire df w-100 bg-greyll mt1 mb2"></span>
+          <span class="h-wire df w-100 bg-greyxl mt1 mb2"></span>
         </h1>
       </div>
 
@@ -26,7 +28,11 @@
           class="bca-hotpink bsa-solid bwa1 h3 w3 bra-50 db"
           src="https://0.gravatar.com/avatar/2ffdfa89aaf6195cd438dc013fff12b2"
         />
-        <a href="https://github.com/gemmadlou" class="mr-au ml1 grey fs-1 tdx">{{ page.author }}</a>
+        <a
+          href="https://github.com/gemmadlou"
+          class="mr-au ml1 grey fs-1 tdx"
+          >{{ page.author }}</a
+        >
         <div class="fs-1">{{ page.date }}</div>
       </div>
 

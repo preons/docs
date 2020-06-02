@@ -1,14 +1,14 @@
 <template>
-  <div class="relative greyd bg-white df-m bg-greyll">
+  <div class="relative greyd bg-white df-m bg-greyxl">
     <div class="relative w-xxbig-m">
       <div
-        class="bg-greyll dn db-m w-xxbig-m mb12-m mt0-m pr0-m relative scroll-m fixed-m h-100"
+        class="bg-greyxl dn db-m w-xxbig-m mb12-m mt0-m pr0-m relative scroll-m fixed-m h-100"
       >
         <ul class="lh0">
           <li class v-for="article in articles">
             <span
               v-if="article.name"
-              class="grey bg-hotpinkll pl2 pa-thin fwb tdx db bcb-bluel bwb1 bsa-solid"
+              class="greyd bg-greyl pl2 pa-thin fwb tdx db bcb-lilacl bwb1 bsa-solid"
               >{{ article.name }}</span
             >
             <a
@@ -21,7 +21,7 @@
                 'pa-xsmall',
                 'tdx',
                 'db',
-                'bcb-bluel',
+                'bcb-lilacl',
                 'bwb1',
                 'bsa-solid'
               ]"
@@ -38,7 +38,7 @@
       <div class="s-article">
         <h1>
           {{ page.title }}
-          <span class="h-wire df w-100 bg-greyll mt1 mb2"></span>
+          <span class="h-wire df w-100 bg-greyxl mt1 mb2"></span>
         </h1>
       </div>
 
@@ -50,15 +50,15 @@
       class="dn db-l w-xxbig-m mb12-m mt0-m pr0-m scroll-m relative h-100 w-100 maxw-xxbig-m"
     >
       <ul class="fixed lh0 w-100">
-        <li class="bca-bluel bwb1 bwr1 bsa-solid">
-          <a class="grey bg-greyl pl2 pa-xsmall tdx db tfu" href="#"
+        <li class="bca-lilacl bwb1 bwr1 bsa-solid">
+          <a class="lilacd bg-greyl pl2 pa-xsmall tdx db tfu" href="#"
             >Table of contents</a
           >
         </li>
-        <li class="bca-bluel bwb1 bwr1 bsa-solid">
+        <li class="bca-lilacl bwb1 bwr1 bsa-solid">
           <a class="hotpink pl2 pa-xsmall tdx db" href="#">{{ page.title }}</a>
         </li>
-        <li class="bca-bluel bwb1 bwr1 bsa-solid" v-for="heading in headings">
+        <li class="bca-lilacl bwb1 bwr1 bsa-solid" v-for="heading in headings">
           <a class="hotpink pl2 pa-xsmall tdx db" :href="heading.link">{{
             heading.name
           }}</a>
