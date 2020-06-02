@@ -85,7 +85,17 @@ This is the prefix of the functional css class. The above config will create the
 
 ### Rules
 
-Sometimes you find yourself typing the same rules over and over again. Whilst this cannot be completely avoided, you can define rules you want to repeat across multiple properties:
+These are reusable rules across multiple css properties.
+
+```yaml
+preons:
+  theme-colors:
+    1: 1rem
+    2: 2rem
+    3: 3rem
+```
+
+Sometimes you find yourself typing the same rules over and over again. Whilst this cannot be completely avoided, you can reuse these rules across multiple properties:
 
 ```yaml
 preons:

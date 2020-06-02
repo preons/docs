@@ -1,6 +1,6 @@
 ---
-title: Install the Preons CLI
-blurb: Easily start generating your own docs and libraries with the preons cli
+title: 🚀 Install The CLI
+blurb: Easily start generating your own docs and libraries with the Preons CLI
 author: Gemma Black
 ---
 
@@ -8,7 +8,7 @@ author: Gemma Black
 
 - Node v10+
 
-> It hasn't been tested on a Window's machine. If there are any issues, please raise them [here](https://github.com/preons/preons/issues).
+> It hasn't been tested on a Windows' machine. If there are any issues, please raise them [here](https://github.com/preons/preons/issues).
 
 ## Install
 
@@ -24,4 +24,21 @@ npm i preons -g
 
 ```bash
 yarn global add preons
+```
+
+## Commands
+
+```bash
+Usage: preons [options] [command]
+
+Options:
+  -V, --version      output the version number
+  -h, --help         display help for command
+
+Commands:
+  stylesheet         Generates a stylesheet
+  config             Converts config
+  docs               Generate documentation
+  translate [file]   Translate css into preons config
+  help [command]     display help for command
 ```

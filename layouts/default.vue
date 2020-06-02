@@ -72,6 +72,10 @@ body {
     @extend .bsb-solid;
     @extend .bca-greyll;
     @extend .lh4-m;
+
+    &:first-child {
+      @extend .pt0;
+    }
   }
 
   h3 {
@@ -112,11 +116,6 @@ body {
   }
 
   pre {
-    // @extend .w-100;
-    // @extend .pl1;
-    // @extend .pr1;
-    // @extend .mb2;
-    // @extend .mt2;
     font-family: monospace;
   }
 
