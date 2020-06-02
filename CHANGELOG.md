@@ -1,3 +1,23 @@
+# v0.0.62 (Tue Jun 02 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Gemma Black ([@gemmadlou](https://github.com/gemmadlou)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: add emoji to generate library guide title ([@gemmadlou](https://github.com/gemmadlou))
+- fix: color corrections after preons theme update ([@gemmadlou](https://github.com/gemmadlou))
+- fix: move preons readme content into documentations ([@gemmadlou](https://github.com/gemmadlou))
+- fix: add more hero components ([@gemmadlou](https://github.com/gemmadlou))
+- fix: safari missing menu ([@gemmadlou](https://github.com/gemmadlou))
+
+#### Authors: 1
+
+- Gemma Black ([@gemmadlou](https://github.com/gemmadlou))
+
+---
+
 # v0.0.61 (Sun May 31 2020)
 
 :tada: This release contains work from a new contributor! :tada:
