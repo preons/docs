@@ -146,7 +146,7 @@ body {
   }
 
   img[src*='#boxed'] {
-    @extend .bg-greyxl;
+    @extend .bg-greyl;
     @extend .pa1;
     @extend .pa2-m;
   }
