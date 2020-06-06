@@ -29,12 +29,7 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@200;400;500;600;700&display=swap'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          '//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css'
+          'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Martel:wght@200;300;400;600;700;800;900&family=Roboto+Mono:wght@100;300;400;500;700&display=swap'
       }
     ]
   },

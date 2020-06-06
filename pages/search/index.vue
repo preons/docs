@@ -46,6 +46,8 @@
 </template>
 
 <script>
+import config from '../../node_modules/preons/dist/preons-config.json';
+
 export default {
   data() {
     return {
@@ -54,12 +56,8 @@ export default {
     }
   },
   async asyncData({ $axios }) {
-    let response = await $axios.get(
-      'https://unpkg.com/preons@0.3.19/dist/preons-config.json'
-    )
-
     let properties = Object.entries(
-      response.data.preons.properties
+      config.preons.properties
     ).map(([property, values]) => ({ property, ...values }))
 
     return {

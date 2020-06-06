@@ -70,7 +70,7 @@ body {
     @extend .fwb;
     @extend .bwb1;
     @extend .bsb-solid;
-    @extend .bca-greyxl;
+    @extend .bca-light;
     @extend .lh4-m;
 
     &:first-child {
@@ -116,18 +116,18 @@ body {
   }
 
   pre {
-    font-family: monospace;
+    @extend .ff-roboto-mono;
   }
 
   mark {
-    @extend .bg-greyxl;
+    @extend .bg-light;
     @extend .dib;
     @extend .black;
     @extend .pa-thin;
   }
 
   blockquote {
-    @extend .bg-greyxl;
+    @extend .bg-light;
     @extend .pa2;
     @extend .pt1;
     @extend .pb1;
@@ -146,7 +146,7 @@ body {
   }
 
   img[src*='#boxed'] {
-    @extend .bg-greyl;
+    @extend .bg-neutrall;
     @extend .pa1;
     @extend .pa2-m;
   }
@@ -163,7 +163,7 @@ body {
       @extend .pa-xxsmall;
       @extend .pl-small;
       @extend .pr-small;
-      @extend .bg-greyxl;
+      @extend .bg-light;
     }
   }
 

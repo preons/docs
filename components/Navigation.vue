@@ -13,116 +13,47 @@
         class="bg-hotpink absolute t0 l0 w-100 h-100 o-10 z-1"
       ></span>
     </div>
-    <div
-      :class="[
-        spaceBg ? '' : 'bg-white',
-        'df',
-        'justify-between',
-        'justify-end-m',
-        'items-center',
-        'pa1',
-        'pl2-m',
-        'pr2-m',
-        'z-2',
-        'fixed',
-        't0',
-        'w-100'
-      ]"
-    >
-      <a href="/" :class="[css.color, 'tdx', 'relative', 'mr-au']">
-        <h1>🛰 Preons</h1>
-      </a>
+    <div class="df-m w-100 justify-between relative">
+      <nav class="df items-center justify-between bg-transparent-m items-center-m z-2 fixed relative-m w-100 w-au-m">
+          <h1 class="pa1 fs1 neutrall lh0 ff-josefin pl2-m">
+            <nuxt-link class="tdx light" to="/">Preons</nuxt-link>
+          </h1>
 
-      <nuxt-link
-        to="/learn"
-        :class="['dn', 'dib-m', 'tdx', 'mr1', css.color, 'relative']"
-        >Learn</nuxt-link
-      >
-
-      <nuxt-link
-        to="/articles"
-        :class="['dn', 'dib-m', 'tdx', 'mr1', css.color, 'relative']"
-        >Articles</nuxt-link
-      >
-
-      <nuxt-link
-        to="/search"
-        :class="['dn', 'dib-m', 'tdx', 'mr1', css.color, 'relative']"
-        >Reference</nuxt-link
-      >
-
-      <a
-        href="https://github.com/preons/preons"
-        class="dn dib-m tdx hotpink mr1 relative"
-        >GitHub</a
-      >
-
-      <nuxt-link
-        to="/search"
-        class="dn-m relative mr-xxsmall ml-au ml0-m"
-        title="Search functional css classes and their related css properties"
-      >
-        <img
-          alt="Search button"
-          src="/icons/search-white.svg"
-          height="24"
-          width="24"
-        />
-      </nuxt-link>
-
-      <div class="dn-m" v-on:click="showMenu">
-        <span class="h-wire w1 bg-hotpink db mb-xxxsmall"></span>
-        <span class="h-wire w1 bg-hotpink db mb-xxxsmall"></span>
-        <span class="h-wire w1 bg-hotpink db"></span>
-      </div>
-    </div>
-
-    <div v-if="menu" class="fixed l0 t0 w-100 h-100 z-3">
-      <span class="bg-white absolute t0 l0 w-100 h-100 o-100 z0"></span>
-
-      <div
-        class="pa1 df justify-between items-center relative lh0 z-1 bca-greyxl bsa-solid bwb1"
-      >
-        <a href="/" class="hotpink tdx relative">
-          <h1>🛰 Preons</h1>
-        </a>
-
-        <div class="dn-m" v-on:click="hideMenu">
-          <span class="h-wire w1 bg-hotpink db o0 mb-xxxsmall"></span>
-          <span class="h-wire w1 bg-hotpink db mb-xxxsmall"></span>
-          <span class="h-wire w1 bg-hotpink db o0"></span>
-        </div>
-      </div>
-
-      <ul class="greyd relative fwl ls1">
-        <li>
-          <nuxt-link
-            class="pa1 bca-greyxl bsa-solid bwb1 db greyd tdx"
-            to="/learn"
-            >Learn</nuxt-link
-          >
-        </li>
-        <li>
-          <nuxt-link
-            class="pa1 bca-greyxl bsa-solid bwb1 db greyd tdx"
-            to="/articles"
-            >Articles</nuxt-link
-          >
-        </li>
-        <li>
-          <nuxt-link
-            class="pa1 bca-greyxl bsa-solid bwb1 db greyd tdx"
-            to="/search"
-            >Reference</nuxt-link
-          >
-        </li>
-        <li>
-          <a
-            class="pa1 bca-greyxl bsa-solid bwb1 db hotpink tdx"
-            href="https://github.com/preons/preons"
-            >GitHub</a
-          >
-        </li>
+          <nuxt-link to="/search" title="Search functional css classes and their related css properties" class="mr1 dn-m relative mr-xxsmall ml-au">
+              <img alt="Search button" src="/icons/search-white.svg" height="30" width="30">
+          </nuxt-link>
+          
+          <div class="dn-m pr1" v-on:click="showMenu">
+              <span v-if="!menu" class="h-thin w-icon bg-neutrall db mb-xxxsmall"></span>
+              <span class="h-thin w-icon bg-neutrall db mb-xxxsmall"></span>
+              <span v-if="!menu" class="h-thin w-icon bg-neutrall db"></span>
+          </div>
+      </nav>
+      <ul v-bind:class="[menu ? 'db' : 'dn', 'fixed relative-m', 'w-100', 'h-100', 't0', 'pt5 pt0-m', 'db', 'bg-dark', 'df-m', 'bg-transparent-m', 'pr1-m', 'z-1', 'w-au-m']">
+          <li>
+              <nuxt-link to="/learn" class="lh0 fs0 pa1 db tdx active ff-josefin tfu center tfx-m fs1-m neutrall-m">
+                  Learn
+              </nuxt-link>
+              <span class="bg-layout bra1 h-thin ml-au mr-au w2 db dn-m"></span>
+          </li>
+          <li>
+              <nuxt-link to="/articles" class="lh0 fs0 pa1 db tdx active ff-josefin tfu center tfx-m fs1-m neutrall-m">
+                  Articles
+              </nuxt-link>
+              <span class="bg-layout bra1 h-thin ml-au mr-au w2 db dn-m"></span>
+          </li>
+          <li>
+              <nuxt-link to="" class="lh0 fs0 pa1 db tdx active ff-josefin tfu center tfx-m fs1-m neutrall-m">
+                  Reference
+              </nuxt-link>
+              <span class="bg-layout bra1 h-thin ml-au mr-au w2 db dn-m"></span>
+          </li>
+          <li>
+              <nuxt-link to="" class="lh0 fs0 pa1 db tdx active ff-josefin tfu center tfx-m fs1-m neutrall-m">
+                  GitHub
+              </nuxt-link>
+              <span class="bg-layout bra1 h-thin ml-au mr-au w2 db dn-m"></span>
+          </li>
       </ul>
     </div>
   </div>
@@ -146,7 +77,7 @@ export default {
   },
   methods: {
     showMenu() {
-      this.menu = true
+      this.menu = !this.menu
     },
     hideMenu() {
       this.menu = false
