@@ -5,46 +5,42 @@ blurb: A non-designer's steps to creating a web design in the browser
 author: Gemma Black
 ---
 
-I've written this article as I developed the theme. Almost in real-time. It'll be like a Twitch stream but written.
+## The problem
 
-## The aim
-
-It's 3-fold.
-
-- To show you don't have to be a designer to create something that looks ok.
-- Show a real-time progression of how a developer/non-designer creates a website and the principles and rules that help
-- Show you how Preons can systemize user interfaces.
-
-## Background info
-
-### Why am I recreating a theme
-
-Whilst the Preons documentation looks fine, the homepage and the documentation seem like two different websites. The homepage has a space theme. But the documentation is grey and pink:
+I threw the Preons documentation website together. It didn't look terrible, but it didn't look great either.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/learn-preons.png)
 
-## Ok let's start
+I didn't like the use of colors. I didn't think about what the theme should be, or the fonts. And I think it showed. But documentation is meant to be boring anyway, right?
 
-### The new theme requirements
+## The aim
 
-- Represent a space theme because The mascot is a satellite.
-- Do dark-mode really well. Space is by nature, dark. So it makes sense to carry this motif in Preons.
-- Do light-mode really well, because light-mode is the standard and is better for reading.
+I wanted to recreate the documentations and get a chance to exercise my design skills. Hopefully, if you're like me and don't know much about design, you'll see what process I follow.
+
+## The requirements
+
+- Represent a space theme. The mascot is a satellite.
+- Have both dark and light mode. Space is by nature, dark. So it makes sense to carry this motif in Preons. Light mode is essential because it's easier to read on lighter backgrounds.
 - Have consistency throughout the website
 
-### Color comes first
+## Color comes first
 
-My process is to start with color simply because I already have a logo.
+My process is to start with color simply because I already have a logo. The logo itself is made of colors. I'll be following the principles in this video.
 
-If you want to see how the professional creates a palette, watch this video first. I'll basically be following his example.
-
-<div class="relative">
+<div class="relative mb2" style="padding-bottom: 56.25%">
 <iframe class="w-100 h-100 l0 t0 absolute" width="560" height="315" src="https://www.youtube.com/embed/9S8LGdpNh4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-### What are the colors
+## What are the colors
 
-The great thing about working in the browser, is you can find out what the colors of things are using the color-picker tool. Using Chrome, I create a basic grid and pick out the main colors that I see.
+The great thing about working in the browser, is you can find out what the colors of things are using the color-picker tool. Using Chrome, I create a basic grid and pick out the main colors that I see in the logo.
+
+Notice:
+
+- The yellow
+- Blues
+- Greys
+- Purple
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/brand-colors.png)
 
@@ -63,35 +59,21 @@ The great thing about working in the browser, is you can find out what the color
 </div>
 ```
 
-Notice the mustard color. I didn't even see if before. But it's there. The most obvious is the blue. But there are shades of grey also.
+If you didn't see the mustard color, don't worry. Neither did I. But looking at it closely, it's hard to miss.
 
-### Dark vs Lightmode
+## Dark vs Lightmode
 
 So apps usually come in two modes. And we want to be able to cater to both.
 
-I pick a darker color first. There's no exact science to this. But I play around with hues based on the blue. I achieve a dark blue-towards-black color. 
+I pick a darker color first. There's no reason to start with dark or light, it's just whatever came to my mind first. But I play around with hues based on the blue in the logo. I achieve a dark blue-towards-black color. 
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/dark-vs-light-mode.png)
 
-```html
-<div class="pa1 pa2-m relative maxw-super">
-    <div class="w8 absolute t-25 l-40">
-        <img src="https://www.preons.co/images/satellite.png" class="w-100 h-au">
-    </div>
-    <div class="df" >
-        <div class="w-50 h-xxbig" style="background-color: #1c334c;">
+## Tweaking the colors
 
-        </div>
-        <div class="w-50 h-xxbig" style="background-color: #e8f3ff;">
+In fairness, my dark blue almost looked green. 
 
-        </div>
-    </div>
-</div>
-```
-
-#### Tweaking the colors
-
-In fairness, my dark blue almost looks green. The expanse of space is less green and more purple. So I change the dark color to be `#211c4c`. I still like the light version but make it slightly more lilac.
+The expanses of space are less green and more purple, at least to me. So I changed the dark color to be `#211c4c`. 
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/dark-vs-light-mode-v2.png)
 
@@ -111,13 +93,13 @@ In fairness, my dark blue almost looks green. The expanse of space is less green
 </div>
 ```
 
-#### Readjusting brand color
+## The layout color
 
-So while the blue is fine, I think having a brand purple is better. Again, there's no exact science and I can tweak it later if I really don't like it.
+So while the blue is fine, I think having the layout be a more blue/purple is better. Again, there's no exact science to this and I could always tweak it later if I really didn't like it.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/dark-vs-light-brand-color.png)
 
-Happy with that. Still not a fan of the light blue, but the brand purple stands out against it on both light and dark.
+Happy with that, I found, I was till not a fan of the light blue. But, I am pleased the brand purple stands out against both modes.
 
 ```html
 <div class="pa1 pa2-m relative maxw-super">
@@ -135,11 +117,11 @@ Happy with that. Still not a fan of the light blue, but the brand purple stands 
 </div>
 ```
 
-#### Low contrast neutral colors
+## Low contrast neutral colors
 
 ![](https://snipboard.io/l8Bz4U.jpg)
 
-I then create a low contrast neutral just like the video says. And it looks pretty decent. It doesn't clash with the logo.
+I then created a low contrast neutral just like the video says. I check it doesn't clash with the logo.
 
 ```html
 <div class="pa1 pa2-m relative maxw-super">
@@ -159,17 +141,17 @@ I then create a low contrast neutral just like the video says. And it looks pret
 </div>
 ```
 
-#### High contrast colors
+## High contrast colors
 
-This is easy. I use the dark and light backgrounds from the opposite sides. So I'm not adding more colors to the palette in this one.
+I used the dark and light backgrounds from the opposite sides. So I'm not adding more colors to the palette here.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/high-contrast.png)
 
-#### Reduced high contrast colors
+## Reduced high contrast colors
 
-I reuse colors again here. I use the low contrast neutral colors, but in reverse. If we need to tweak those, now's the time.
+I reused colors again. I used the low contrast neutral colors but in reverse.
 
-It turns out my neutrals were too subtle, so I changed them a little to get more contrast.
+It then turned out my neutrals were too subtle, so I changed them a little to get more contrast.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/reduced-high-contrast.png)
 
@@ -195,41 +177,37 @@ It turns out my neutrals were too subtle, so I changed them a little to get more
 </div>
 ```
 
-#### Error and success states
+## Error and success states
 
-Error is red. So that's simple. I'm not a designer, so I'm doing what the video says. I could reinvent the wheel and make error something else.
+Error is universally red. So that's simple. I'm not a designer, so I'm doing what the video says. I could reinvent the wheel and make error something else.
 
-Success state is usually green or blue. So I'll go with that.
+Success states are usually green or blue. So I went with that.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/success-error-states.png)
 
-I've gone for a strobe-like green, closer to turquoise than plants and trees. Notice, I've used the same green and red on both the light and dark modes.
-
-#### Colors that represent the disabled state
+## Disabled state
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/disabled-colors.png)
 
-Great. We now have 8 different colors. But we're not done yet.
+I now had 8 different colors but I was not done yet.
 
-#### Active states
+## Active states
 
-Finally, I get to active colors. I've become attached to the Preons pink. It made sense to me. Purple and pink.
-
-But I decided to go with yellow. Plus on a Mac, the satellite emoji, natively has a yellow body.
+I decided to go with yellow. Plus on a Mac, the satellite emoji natively has a yellow body.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/active-colors.png)
 
 Anywho. Colors are done. Well, almost. I'll need to create a preons.yaml. But first. Typography.
 
-### Typography
+## Typography
 
-I'm happy with the typography scale in preons. It uses as perfect-fourth scale.
+I'm happy with the typographic scale in preons. It uses a perfect-fourth scale.
 
 But the Raleway font doesn't speak satellites and space. Of course, I don't want to be cliche, but it's a chance to add a bit more character to the website.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/font-headings.png)
 	
-I ended up falling for Josefin Sans. It looks modern and I can see a space-theme develop around it.
+I fell for Josefin Sans after 15 minutes of browsing through Google Fonts. It looks modern and I can see a space-theme develop around it.
 
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Roboto+Mono:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
@@ -250,23 +228,21 @@ I finally copied the `preons.yaml` and added the new font-families there. You ca
       roboto-mono: "#{'Roboto Monp', monospace}"
 ```
 
-#### Text
-
-So I create a larger bit of text, maybe the lead paragraph and then smaller text.
+## Text
  
-As this website will mainly be one giant documentation, I don't want the text to be too large; as the code examples cannot be too big.
+I created a lead-line paragraph and a standard text paragraph.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/lead-text-and-paragraph.png)
 
-I test what a large headline looks like against the text. In reality, I'd want to use a smaller size headlines. Also the difference in the fonts look good. I didn't want to use two fonts initially but they compliment each other. And usually I prefer lighter font faces, but this all seems to work really well together. So I won't change it.
+I tested the use of Josefin as body text but it didn't work so well. So I used Josefin for the headline, and Martel for the body.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/text-color-theme.png)
 
-I check the light theme colors and it works. Because the yellow was too light, I made use of the darker version. I still don't think it's dark enough. But we'll see.
+I checked the light theme colors vs dark, then tweaked the yellow to have more contrast.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/text-dark-mode.png)
 
-Ordered and unordered lists are pretty straightforward. The rule seems to be, `mb2` for spacing between paragraphs. And the font sizing is consistent on everything.
+Ordered and unordered lists were pretty straightforward.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/unordered-list.png)
 
@@ -276,7 +252,7 @@ The blockquote should stand out. But I don't want it to stand out too much. So h
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/blockquote.png)
 
-#### Updating the yaml to include the new colors
+## Update the yaml to include the new colors
 
 For this, I changed the convention to match how I would use the colors in the scheme. Plus I created a secondary active color because hotpink was part of the original Preons and it would be good to keep that.
 
@@ -317,6 +293,8 @@ Preons unfortunately doesn't have hover states yet. I added shadow elements to t
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/buttons.png)
 
+Eventually I changed the buttons to be more demure. The yellow was too harsh.
+
 ## Menu
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/menu-mobile.png)
@@ -333,3 +311,8 @@ Whilst I loved the original design, it needs to be in keeping with the new tone.
 
 ## Completing the design system
 
+As you can see, I didn't start with wireframes or Photoshop. Everything was done in the browser and built up. I made choices along the way, and tried to match themes that emerged as I built up the design.
+
+Whilst having a designer on your team is the best-case scenario, you can get by without one for some projects.
+
+Hope this article helps you on your next project.

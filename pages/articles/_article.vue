@@ -13,7 +13,7 @@
       </ul>
     </div> -->
     <div
-      class="pa1 pt2 pl2-m pr2-m pb2-m relative maxw-xsuper w-100 ml-xxbig-m"
+      class="pa1 pt2 pl2-m pr2-m pb2-m relative maxw-xxsuper w-100 ml-xxbig-m"
     >
       <div class="s-article">
         <h1>
