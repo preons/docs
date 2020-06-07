@@ -27,8 +27,8 @@
       <h1>Articles</h1>
       <div class="df-m">
         <div class="mb1 w-4-12-m relative-m" v-for="article in articles" :key="article.path">
-          <span class="db fs-2 neutral tfu">{{ article.date }}</span>
-          <a class="lh0" href="/articles/making-preons">{{ article.title }}</a>
+          <span class="db fs-2 neutral tfu">{{ article.createdAt }}</span>
+          <nuxt-link class="lh0" :to="article.path">{{ article.title }}</nuxt-link>
           <p>{{ article.blurb }}</p>
           <div class="h-thin bg-layout w1 absolute-m b0"></div>
         </div>
@@ -38,6 +38,8 @@
 </template>
 
 <script>
+
+
 export default {
   layout: 'simple',
   data() {
@@ -49,11 +51,11 @@ export default {
     const articles = await $content('articles').fetch()
 
     const sortedArticles = articles.sort((a, b) => {
-      if (a.date < b.date) {
+      if (a.createdAt < b.createdAt) {
         return 1
       }
 
-      if (a.date > b.date) {
+      if (a.createdAt > b.createdAt) {
         return -1
       }
 

@@ -1,6 +1,6 @@
 ---
 title: Roadmap
-date: May 31, 2020
+date: 2020-05-31
 blurb: Stage one of the Preons journey
 author: Gemma Black
 ---

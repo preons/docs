@@ -1,5 +1,5 @@
 <template>
-  <div class="relative df-m bg-neutrald shrink-20">
+  <div class="relative df-m bg-neutrald shrink-20 minw0">
 
     <!-- main article -->
     <div

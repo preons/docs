@@ -1,6 +1,6 @@
 ---
 title: Making Preons
-date: May 24, 2020
+date: 2020-05-24
 blurb: How Preons became a css generating system and principles I learned along the way.
 author: Gemma Black
 ---

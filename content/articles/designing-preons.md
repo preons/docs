@@ -1,7 +1,7 @@
 ---
 title: Recreating The Preons Theme
-date: June 5, 2020
-blurb: More info soon
+date: 2020-06-05
+blurb: A non-designer's steps to creating a web design in the browser
 author: Gemma Black
 ---
 
