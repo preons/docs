@@ -35,21 +35,17 @@ You can start in one of two ways.
 </html>
 ```
 
-Next:
-
 ## The Navigation
 
-Now you've gotten setup. The first thing we'll add is the navigation. I'll let you choose what's most appropriate.
-
-> incomplete
+👉 Grab the HTML from the [navigation example](https://ui.preons.co/?path=/story/navigation--responsive). It is already responsive, but you can tweak it to suit your needs.
 
 ## The Hero section
 
-> incomplete
+👉 Grab the HTML from the [hero example](https://ui.preons.co/?path=/story/hero--hero-1).
 
 ## The Portfolio
 
-> incomplete
+👉 For the portfolio, you can use a [simple grid](https://ui.preons.co/?path=/story/grid--grid-of-4). The images are from unsplash but of course, you can change them or use your own personal ones.
 
 ## The Get In Touch Form
 
@@ -57,15 +53,11 @@ Now you've gotten setup. The first thing we'll add is the navigation. I'll let y
 
 ## The Footer
 
-> incomplete
-
-## Let's customise
-
-> incomplete
+👉 There are two parts. The [footer links](https://ui.preons.co/?path=/story/footer--footer-inverted) and the [legal end](https://ui.preons.co/?path=/story/legals--legals-1). Grab both.
 
 ## What does your version look like
 
-Here's what I got.
+Here's mine. I added a testimonial and changed the grid size.
 
 ![](/images/quick-make.jpg#boxed)
 

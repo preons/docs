@@ -46,9 +46,8 @@ body {
 }
 
 .s-article {
-  @extend .lh0;
+  @extend .lh1;
   @extend .fs0;
-  @extend .lh1-m;
 
   li,
   p {
@@ -60,6 +59,7 @@ body {
     @extend .lh2;
     @extend .mb2;
     @extend .fwb;
+    @extend .ff-josefin;
   }
 
   h2 {
@@ -70,8 +70,9 @@ body {
     @extend .fwb;
     @extend .bwb1;
     @extend .bsb-solid;
-    @extend .bca-light;
+    @extend .bca-greyl;
     @extend .lh4-m;
+    @extend .ff-josefin;
 
     &:first-child {
       @extend .pt0;
@@ -82,6 +83,7 @@ body {
     @extend .fs0;
     @extend .mb1;
     @extend .fwb;
+    @extend .ff-josefin;
   }
 
   h4 {
@@ -91,12 +93,7 @@ body {
     @extend .tdu;
   }
 
-  p {
-    @extend .lh0;
-  }
-
   li {
-    @extend .lh0;
     @extend .ml2;
     @extend .mr2;
     @extend .mr4-m;
@@ -112,7 +109,7 @@ body {
 
   a {
     @extend .tdx;
-    @extend .hotpink;
+    @extend .actived;
   }
 
   pre {
@@ -127,7 +124,7 @@ body {
   }
 
   blockquote {
-    @extend .bg-light;
+    @extend .bg-white;
     @extend .pa2;
     @extend .pt1;
     @extend .pb1;
@@ -164,6 +161,7 @@ body {
       @extend .pl-small;
       @extend .pr-small;
       @extend .bg-light;
+      @extend .ff-roboto-mono;
     }
   }
 
@@ -171,6 +169,10 @@ body {
     @extend .mb1;
     @extend .w-100;
     overflow-x: hidden;
+  }
+
+  :not(pre) > code[class*="language-"], pre[class*="language-"] {
+    @extend .bg-white;
   }
 }
 </style>

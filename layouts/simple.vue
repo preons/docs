@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-white ff-raleway black">
+  <div class="bg-light ff-martel neutrald">
     <navigation />
 
-    <span class="dt h3"></span>
+    <span class="dt" style="height: 5rem;"></span>
 
     <nuxt />
   </div>

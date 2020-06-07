@@ -1,14 +1,15 @@
 <template>
-  <div class="relative black bg-white df-m bg-greyxl">
+  <div class="relative df-m bg-neutrald">
+    <!-- Side bar -->
     <div class="relative w-xxbig-m">
       <div
-        class="bg-greyxl dn db-m w-xxbig-m mb12-m mt0-m pr0-m relative scroll-m fixed-m h-100"
+        class="dn db-m w-xxbig-m mb12-m mt0-m pr0-m relative scroll-m fixed-m h-100 bg-dark"
       >
         <ul class="lh0">
           <li class v-for="article in articles">
             <span
               v-if="article.name"
-              class="greyd bg-greyl pl2 pa-thin fwb tdx db bcb-lilacl bwb1 bsa-solid"
+              class="ff-josefin bg-neutral pl2 pa-thin fwb tdx db"
               >{{ article.name }}</span
             >
             <a
@@ -16,12 +17,12 @@
               :key="link.path"
               :class="[
                 'pointer',
-                'hotpink',
+                'actived',
                 article.name ? 'pl3' : 'pl2',
                 'pa-xsmall',
                 'tdx',
                 'db',
-                'bcb-lilacl',
+                'bcb-neutrald',
                 'bwb1',
                 'bsa-solid'
               ]"
@@ -32,13 +33,15 @@
         </ul>
       </div>
     </div>
+    <!-- end of sidebar -->
+
+    <!-- main article -->
     <div
-      class="bg-white pa1 pt3 pl2-m pr2-m pb2-m relative maxw-xsuper minw0 w-100 shrink-20"
+      class="bg-light pa1 pt3 pl2-m pr2-m pb2-m relative maxw-xxsuper minw0 w-100 shrink-20"
     >
       <div class="s-article">
         <h1>
           {{ page.title }}
-          <span class="h-wire df w-100 bg-greyxl mt1 mb2"></span>
         </h1>
       </div>
 
@@ -46,20 +49,22 @@
         <nuxt-content :document="page" />
       </div>
     </div>
+
+    <!-- secondary sidebar -->
     <div
-      class="dn db-l w-xxbig-m mb12-m mt0-m pr0-m scroll-m relative h-100 w-100 maxw-xxbig-m"
+      class="ff-josefin dn db-l w-xbig-m mb12-m mt0-m pr0-m scroll-m relative h-100 w-100 maxw-xbig-m"
     >
       <ul class="fixed lh0 w-100">
-        <li class="bca-lilacl bwb1 bwr1 bsa-solid">
-          <a class="lilacd bg-greyl pl2 pa-xsmall tdx db tfu" href="#"
+        <li class="">
+          <a class="light bg-neutral pa1 tdx db tfu o-90" href="#"
             >Table of contents</a
           >
         </li>
-        <li class="bca-lilacl bwb1 bwr1 bsa-solid">
-          <a class="hotpink pl2 pa-xsmall tdx db" href="#">{{ page.title }}</a>
+        <li class="">
+          <a class="actived pl1 pa-xsmall tdx db" href="#">{{ page.title }}</a>
         </li>
-        <li class="bca-lilacl bwb1 bwr1 bsa-solid" v-for="heading in headings">
-          <a class="hotpink pl2 pa-xsmall tdx db" :href="heading.link">{{
+        <li class="" v-for="heading in headings">
+          <a class="actived pl1 pa-xxsmall tdx db" :href="heading.link">{{
             heading.name
           }}</a>
         </li>

@@ -4,16 +4,16 @@ blurb: Introduction to Preons, a functional CSS library
 author: Gemma Black
 ---
 
-## Features
+<!-- ## Features
 
 - **Build UIs** quickly only with HTML
 - **Reuse components** across pages without writing additional CSS
 - Reuse components across **different projects** with different styles just by tweaking a config
-- **Generate CSS** and component documentation easily
+- **Generate CSS** and component documentation easily -->
 
 ## Get started
 
-1. [Build a user interface](/learn/ui/build): A 15-minute guide on how to install Preons and start building a website.
+1. [Build a user interface quickly](/learn/ui/build): A 15-minute guide on how to install Preons and start building a website.
 2. [Generate your own library](/learn/cli/guide): Generate your own library using the preons.yaml configuration file
 
 ## What is Preons

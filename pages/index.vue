@@ -17,10 +17,10 @@
             />
           </h1>
           <p class>
-            <a
+            <nuxt-link to="/learn"
               href
               class="dib ff-josefin tdx pa1 pl3 pr3 active bg-neutral tfu ls1 bra5 fs0"
-            >Read the docs</a>
+            >Read the docs</nuxt-link>
           </p>
         </div>
       </div>

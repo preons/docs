@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <div class="fixed t0 l0 w-100 h-100">
+  <div :class="[spaceBg ? '' : 'fixed z-1 w-100 t0 l0']">
+    <div 
+        v-if="spaceBg" class="fixed t0 l0 w-100 h-100">
       <img
-        v-if="spaceBg"
         class="absolute t0 l0 w-100 h-100 of-cover z-1"
         alt="Image of space in the background of the screen"
         src="/images/space.jpeg"
@@ -13,10 +13,10 @@
         class="bg-hotpink absolute t0 l0 w-100 h-100 o-10 z-1"
       ></span>
     </div>
-    <div class="df-m w-100 justify-between relative">
-      <nav class="df items-center justify-between bg-transparent-m items-center-m z-2 fixed relative-m w-100 w-au-m">
-          <h1 class="pa1 fs1 neutrall lh0 ff-josefin pl2-m">
-            <nuxt-link class="tdx light" to="/">Preons</nuxt-link>
+    <div :class="['df-m w-100 justify-between relative z-1', spaceBg ? '' : 'bg-neutrald-m']">
+      <nav class="df items-center justify-between bg-neutrald bg-transparent-m items-center-m z-2 fixed relative-m w-100 w-au-m">
+          <h1 class="pa1 pt-xsmall pb-xsmall fs1 neutrall lh0 ff-josefin pl2-m">
+            <nuxt-link class="tdx light lh0 lh1-m dib" to="/">Preons</nuxt-link>
           </h1>
 
           <nuxt-link to="/search" title="Search functional css classes and their related css properties" class="mr1 dn-m relative mr-xxsmall ml-au">
@@ -29,29 +29,29 @@
               <span v-if="!menu" class="h-thin w-icon bg-neutrall db"></span>
           </div>
       </nav>
-      <ul v-bind:class="[menu ? 'db' : 'dn', 'fixed relative-m', 'w-100', 'h-100', 't0', 'pt5 pt0-m', 'db', 'bg-dark', 'df-m', 'bg-transparent-m', 'pr1-m', 'z-1', 'w-au-m']">
+      <ul :class="[menu ? 'db' : 'dn', 'fixed relative-m', 'w-100', 'h-100', 't0', 'pt5 pt0-m', 'db', 'bg-dark', 'df-m', 'bg-transparent-m', 'pr1-m', 'z-1', 'w-au-m']">
           <li>
-              <nuxt-link to="/learn" class="lh0 fs0 pa1 db tdx active ff-josefin tfu center tfx-m fs1-m neutrall-m">
+              <nuxt-link to="/learn" class="lh0 lh1-m fs0 pa1 pt-xsmall pb-xsmall db tdx active ff-josefin tfu center">
                   Learn
               </nuxt-link>
               <span class="bg-layout bra1 h-thin ml-au mr-au w2 db dn-m"></span>
           </li>
           <li>
-              <nuxt-link to="/articles" class="lh0 fs0 pa1 db tdx active ff-josefin tfu center tfx-m fs1-m neutrall-m">
+              <nuxt-link to="/articles" class="lh0 lh1-m fs0 pa1 pt-xsmall pb-xsmall db tdx active ff-josefin tfu center">
                   Articles
               </nuxt-link>
               <span class="bg-layout bra1 h-thin ml-au mr-au w2 db dn-m"></span>
           </li>
           <li>
-              <nuxt-link to="" class="lh0 fs0 pa1 db tdx active ff-josefin tfu center tfx-m fs1-m neutrall-m">
+              <nuxt-link to="/search" class="lh0 lh1-m fs0 pa1 pt-xsmall pb-xsmall db tdx active ff-josefin tfu center">
                   Reference
               </nuxt-link>
               <span class="bg-layout bra1 h-thin ml-au mr-au w2 db dn-m"></span>
           </li>
           <li>
-              <nuxt-link to="" class="lh0 fs0 pa1 db tdx active ff-josefin tfu center tfx-m fs1-m neutrall-m">
+              <a href="https://github.com/preons/preons" class="lh0 lh1-m fs0 pa1 pt-xsmall pb-xsmall db tdx active ff-josefin tfu center">
                   GitHub
-              </nuxt-link>
+              </a>
               <span class="bg-layout bra1 h-thin ml-au mr-au w2 db dn-m"></span>
           </li>
       </ul>
