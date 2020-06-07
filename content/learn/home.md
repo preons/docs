@@ -28,7 +28,7 @@ It is a functional CSS system for building user interfaces. It's designed with t
 
 Take the button below as an example:
 
-<img src="/images/button.jpg#boxed" width="200" class="mb2 maxw-xxbig" />
+<img src="/images/button.jpg" width="200" class="mb2 maxw-xxbig" />
 
 This is what Preons looks like:
 

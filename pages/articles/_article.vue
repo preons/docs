@@ -1,6 +1,6 @@
 <template>
   <div class="relative df-m">
-    <div
+    <!-- <div
       class="dn db-m w-xxbig-m mb12-m mt2-m pa2-m pt1-m pr0-m relative scroll-m s-article fixed-m maxh-90-m"
     >
       <ul>
@@ -11,7 +11,7 @@
           <a :href="heading.link">{{ heading.name }}</a>
         </li>
       </ul>
-    </div>
+    </div> -->
     <div
       class="pa1 pt2 pl2-m pr2-m pb2-m relative maxw-xsuper w-100 ml-xxbig-m"
     >

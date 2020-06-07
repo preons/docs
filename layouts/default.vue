@@ -48,6 +48,7 @@ body {
 .s-article {
   @extend .lh1;
   @extend .fs0;
+  @extend .dark;
 
   li,
   p {
@@ -116,7 +117,7 @@ body {
 
   a {
     @extend .tdx;
-    @extend .actived;
+    @extend .hotpink;
   }
 
   pre {
@@ -124,7 +125,7 @@ body {
   }
 
   mark {
-    @extend .bg-light;
+    @extend .bg-activel;
     @extend .dib;
     @extend .black;
     @extend .pa-thin;
@@ -169,6 +170,11 @@ body {
       @extend .pr-small;
       @extend .bg-light;
       @extend .ff-roboto-mono;
+      @extend .fs-1;
+    }
+
+    > code {
+      @extend .bg-activexl;
     }
   }
 

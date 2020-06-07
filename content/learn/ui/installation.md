@@ -11,8 +11,6 @@ You can install Preons in one of several ways.
 
 The fastest way to get started is by using [unpkg](https://unpkg.com).
 
-[https://unpkg.com/preons/dist/preons.css](https://unpkg.com/preons/dist/preons.css)
-
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&amp;family=Martel:wght@200;300;400;600;700;800;900&amp;family=Roboto+Mono:wght@100;300;400;500;700&amp;display=swap">
 <link href="https://unpkg.com/preons/dist/reset.css" rel="stylesheet" type="text/css" />

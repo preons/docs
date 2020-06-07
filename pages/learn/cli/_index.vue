@@ -1,39 +1,5 @@
 <template>
-  <div class="relative df-m bg-neutrald">
-    <!-- Side bar -->
-    <div class="relative w-xxbig-m">
-      <div
-        class="dn db-m w-xxbig-m mb12-m mt0-m pr0-m relative scroll-m fixed-m h-100 bg-dark"
-      >
-        <ul class="lh0">
-          <li class v-for="article in articles">
-            <span
-              v-if="article.name"
-              class="ff-josefin bg-neutral pl2 pa-thin fwb tdx db"
-              >{{ article.name }}</span
-            >
-            <a
-              v-for="link in article.links"
-              :key="link.path"
-              :class="[
-                'pointer',
-                'actived',
-                article.name ? 'pl3' : 'pl2',
-                'pa-xsmall',
-                'tdx',
-                'db',
-                'bcb-neutrald',
-                'bwb1',
-                'bsa-solid'
-              ]"
-              :href="link.path"
-              >{{ link.title || link.slug }}</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- end of sidebar -->
+  <div class="relative df-m bg-neutrald shrink-20">
 
     <!-- main article -->
     <div
@@ -52,7 +18,7 @@
 
     <!-- secondary sidebar -->
     <div
-      class="ff-josefin dn db-l w-xbig-m mb12-m mt0-m pr0-m scroll-m relative h-100 w-100 maxw-xbig-m"
+      class="ff-josefin bg-light dn db-l w-xbig-m mt0-m pr0-m scroll-m relative h-100 w-100 maxw-xbig-m"
     >
       <ul class="fixed lh0 w-100">
         <li class="">
@@ -87,9 +53,6 @@ const getArticles = async ({ $content, params, categorySlug = '' }) => {
   const page = await $content(
     `learn/${categorySlug}${params.index || 'home'}`
   ).fetch()
-  const learn = await $content('learn').fetch()
-  const learnUi = await $content('learn/ui').fetch()
-  const learnCli = await $content('learn/cli').fetch()
   let headings =
     page &&
     page.body &&
@@ -102,17 +65,12 @@ const getArticles = async ({ $content, params, categorySlug = '' }) => {
       }))
   return {
     page,
-    headings,
-    articles: [
-      { links: learn.map(link) },
-      { name: 'UI', links: learnUi.map(link) },
-      { name: 'CLI', links: learnCli.map(link) }
-    ]
+    headings
   }
 }
 
 export default {
-  layout: 'simple',
+  layout: 'docs',
 
   head() {
     return {

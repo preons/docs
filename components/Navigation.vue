@@ -1,5 +1,5 @@
 <template>
-  <div :class="[spaceBg ? '' : 'fixed z-1 w-100 t0 l0']">
+  <div :class="[spaceBg ? '' : 'fixed z-3 w-100 t0 l0']">
     <div 
         v-if="spaceBg" class="fixed t0 l0 w-100 h-100">
       <img
