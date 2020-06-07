@@ -1,21 +1,18 @@
 ---
 title: Recreating The Preons Theme
 date: 2020-06-05
-blurb: A non-designer's steps to creating a web design in the browser
+blurb: I'm not a designer. But I wanted to redesign the Preons' website. A process. From colors to website.
+image: https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/homepage-redesign.png
 author: Gemma Black
 ---
 
 ## The problem
 
-I threw the Preons documentation website together. It didn't look terrible, but it didn't look great either.
+I'm not a designer. But I wanted to redesign the Preons' website. 
+
+To me, the original didn't look terrible, but it didn't look consistent.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/learn-preons.png)
-
-I didn't like the use of colors. I didn't think about what the theme should be, or the fonts. And I think it showed. But documentation is meant to be boring anyway, right?
-
-## The aim
-
-I wanted to recreate the documentations and get a chance to exercise my design skills. Hopefully, if you're like me and don't know much about design, you'll see what process I follow.
 
 ## The requirements
 
@@ -25,22 +22,15 @@ I wanted to recreate the documentations and get a chance to exercise my design s
 
 ## Color comes first
 
-My process is to start with color simply because I already have a logo. The logo itself is made of colors. I'll be following the principles in this video.
+My process was to start with color. And so I followed the principles in this video.
 
 <div class="relative mb2" style="padding-bottom: 56.25%">
 <iframe class="w-100 h-100 l0 t0 absolute" width="560" height="315" src="https://www.youtube.com/embed/9S8LGdpNh4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## What are the colors
+## What colors
 
-The great thing about working in the browser, is you can find out what the colors of things are using the color-picker tool. Using Chrome, I create a basic grid and pick out the main colors that I see in the logo.
-
-Notice:
-
-- The yellow
-- Blues
-- Greys
-- Purple
+The great thing about working in the browser, is you can find the colors of things with the color-picker tool. Using Chrome, I create a basic grid and pick out the main colors that I see in the logo.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/brand-colors.png)
 
@@ -59,21 +49,28 @@ Notice:
 </div>
 ```
 
+Notice:
+
+- The yellow
+- Blues
+- Greys
+- Purple
+
 If you didn't see the mustard color, don't worry. Neither did I. But looking at it closely, it's hard to miss.
 
-## Dark vs Lightmode
+## Dark vs lightmode
 
 So apps usually come in two modes. And we want to be able to cater to both.
 
-I pick a darker color first. There's no reason to start with dark or light, it's just whatever came to my mind first. But I play around with hues based on the blue in the logo. I achieve a dark blue-towards-black color. 
+I picked a dark color first. I played around with hues from the blue in the logo and achieved a dark blue-towards-black color. 
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/dark-vs-light-mode.png)
 
-## Tweaking the colors
+## Not happy is okay
 
-In fairness, my dark blue almost looked green. 
+I didn't like the blue. It looked green. Green to me represents our beautiful earth and plant life. It doesn't remind me of the expanses of space.
 
-The expanses of space are less green and more purple, at least to me. So I changed the dark color to be `#211c4c`. 
+So I changed the dark color.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/dark-vs-light-mode-v2.png)
 
@@ -99,7 +96,7 @@ So while the blue is fine, I think having the layout be a more blue/purple is be
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/dark-vs-light-brand-color.png)
 
-Happy with that, I found, I was till not a fan of the light blue. But, I am pleased the brand purple stands out against both modes.
+Happy with that, I found, I was still not a fan of the light blue. But, I was pleased the brand purple stood out against both modes.
 
 ```html
 <div class="pa1 pa2-m relative maxw-super">
@@ -121,7 +118,7 @@ Happy with that, I found, I was till not a fan of the light blue. But, I am plea
 
 ![](https://snipboard.io/l8Bz4U.jpg)
 
-I then created a low contrast neutral just like the video says. I check it doesn't clash with the logo.
+You've probably noticed I followed the video, literally. I took the dark and light modes and toned them down a little.
 
 ```html
 <div class="pa1 pa2-m relative maxw-super">
@@ -153,6 +150,8 @@ I reused colors again. I used the low contrast neutral colors but in reverse.
 
 It then turned out my neutrals were too subtle, so I changed them a little to get more contrast.
 
+> Don't be afraid to tweak things as you go along.
+
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/reduced-high-contrast.png)
 
 ```html
@@ -179,13 +178,15 @@ It then turned out my neutrals were too subtle, so I changed them a little to ge
 
 ## Error and success states
 
-Error is universally red. So that's simple. I'm not a designer, so I'm doing what the video says. I could reinvent the wheel and make error something else.
+Error is universally red. All I did was play around with a red that looked comfortable in both dark and light mode. You can create a red for each mode if you prefer, but then it means more colors in the palette.
 
-Success states are usually green or blue. So I went with that.
+Success states are usually green or blue. Again, I used the same green for both dark and light mode.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/success-error-states.png)
 
 ## Disabled state
+
+It's something I would forget about but the video brings it up. Your buttons sometimes need to be in a disabled state. So design for that.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/disabled-colors.png)
 
@@ -193,27 +194,27 @@ I now had 8 different colors but I was not done yet.
 
 ## Active states
 
+These to me are things that tell people to click. It's a color of activity, so it's something you have to be careful not to use in your layout. Otherwise, you risk confusing your users.
+
 I decided to go with yellow. Plus on a Mac, the satellite emoji natively has a yellow body.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/active-colors.png)
 
-Anywho. Colors are done. Well, almost. I'll need to create a preons.yaml. But first. Typography.
+> After the fact, I decided to have two active colors. Hotpink and yellow because the original Preons design had hotpink in it. Plus, I discovered yellow is too low-contrast for text which could present an accessibility issue.
 
 ## Typography
 
-I'm happy with the typographic scale in preons. It uses a perfect-fourth scale.
+I was already satisfied with the typographic scale in Preons. It uses a [perfect-fourth](https://type-scale.com/) scale.
 
-But the Raleway font doesn't speak satellites and space. Of course, I don't want to be cliche, but it's a chance to add a bit more character to the website.
+However, the original Raleway font wasn't consistent with the new theme. Of course, I didn't want to be cliche, but it's a chance to add a bit more character to the website.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/font-headings.png)
 	
-I fell for Josefin Sans after 15 minutes of browsing through Google Fonts. It looks modern and I can see a space-theme develop around it.
+I fell for Josefin Sans after 15 minutes of browsing through Google Fonts. And it seems I'm not the only one who can spend ages looking at fonts.
 
-```html
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Roboto+Mono:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
-```
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Building a website is<br><br>10% deciding what tech stack to use<br>5% coding<br>85% choosing what fonts to use</p>&mdash; James Tucker 🌊 (@tucker_dev) <a href="https://twitter.com/tucker_dev/status/1269349201877532672?ref_src=twsrc%5Etfw">June 6, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-I finally copied the `preons.yaml` and added the new font-families there. You can see I tried a few.
+I finally made a new version of the `preons.yaml` and added the new font-families there. You can see I tried a few.
 
 ```yaml
   font-family:
@@ -230,7 +231,13 @@ I finally copied the `preons.yaml` and added the new font-families there. You ca
 
 ## Text
  
-I created a lead-line paragraph and a standard text paragraph.
+There are a few important elements when creating text.
+
+1. Font size
+2. Line heights
+3. Margins between headings and paragraphs
+
+Once you have gotten the text to look right and read well, it's rather simple.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/lead-text-and-paragraph.png)
 
@@ -238,25 +245,25 @@ I tested the use of Josefin as body text but it didn't work so well. So I used J
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/text-color-theme.png)
 
+## Dark mode text
+
 I checked the light theme colors vs dark, then tweaked the yellow to have more contrast.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/text-dark-mode.png)
+
+## Lists
 
 Ordered and unordered lists were pretty straightforward.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/unordered-list.png)
 
-![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/ordered-list.png)
+## Quotes
 
-The blockquote should stand out. But I don't want it to stand out too much. So here's one idea.
+The blockquote is somerthing I'd usually forget about until I needed it. Here's what I came up with.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/blockquote.png)
 
-## Update the yaml to include the new colors
-
-For this, I changed the convention to match how I would use the colors in the scheme. Plus I created a secondary active color because hotpink was part of the original Preons and it would be good to keep that.
-
-### Final color palette
+## Final color palette
 
 ```yaml
 preons:
@@ -289,13 +296,23 @@ preons:
 
 ## Buttons
 
-Preons unfortunately doesn't have hover states yet. I added shadow elements to the preons theme.
+The funny thing about buttons is that there are lots of choices.
+
+- Square or rounded
+- Filled or outlined
+- Border or no border
+- If bordered, small border or large
+- Flat or shadowed
+
+And there are even more choices like using gradients.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/buttons.png)
 
-Eventually I changed the buttons to be more demure. The yellow was too harsh.
+Eventually I changed the buttons to be more demure than what you see here. The original yellow was too harsh.
 
 ## Menu
+
+We can now start to compose these colors and typographic elements to create our menu. I automatically create menus as mobile first and try not to duplicate elements.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/menu-mobile.png)
 
@@ -303,16 +320,21 @@ Eventually I changed the buttons to be more demure. The yellow was too harsh.
 
 ## Homepage
 
-Whilst I loved the original design, it needs to be in keeping with the new tone. I'm now not entirely sure about the yellow.
+Whilst I loved the original homepage design, it needs to be in keeping with the new themes.
+
+> Again, the yellow button was replaced with a more neutral blue.
 
 ![](https://d2l08bdqaswlm0.cloudfront.net/B76cJ57zw/2020/06/homepage-redesign.png)
 
- It feels slightly too bright so I turn it down. Sorry, no screenshot.
-
 ## Completing the design system
 
-As you can see, I didn't start with wireframes or Photoshop. Everything was done in the browser and built up. I made choices along the way, and tried to match themes that emerged as I built up the design.
+As you can see, I didn't start with wireframes or Photoshop. I'm not a designer, so I'm sure my process will be laughed at by the professionals. Maybe even the design isn't even fantastic to the keen designer eye. But the final outcome looks decent enough to build up from.
 
-Whilst having a designer on your team is the best-case scenario, you can get by without one for some projects.
+Here are some additional notes:
 
-Hope this article helps you on your next project.
+- Everything was done in the browser and built up. You don't need any design software.
+- I used the `preons.yaml` to standardize things like margins, paddings, font sizes and line heights.
+- I made choices along the way, and tried to match themes that emerged as I built up the design.
+- I didn't try too design everything up front.
+
+Hope this article helps you on your next project when you find yourself needing or even dare I say, wanting to do design.

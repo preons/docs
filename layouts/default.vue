@@ -163,6 +163,7 @@ body {
 
   ul,
   ol,
+  li,
   p {
     code {
       @extend .pa-xxsmall;
