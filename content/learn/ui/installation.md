@@ -19,15 +19,13 @@ The fastest way to get started is by using [unpkg](https://unpkg.com).
 
 ### Node modules
 
-#### Install
-
-##### npm
+#### npm
 
 ```bash
 npm install preons
 ```
 
-##### yarn
+#### yarn
 
 ```bash
 yarn add preons
