@@ -60,6 +60,7 @@ body {
     @extend .mb2;
     @extend .fwb;
     @extend .ff-josefin;
+    @extend .neutrald;
   }
 
   h2 {
@@ -73,6 +74,7 @@ body {
     @extend .bca-greyl;
     @extend .lh4-m;
     @extend .ff-josefin;
+    @extend .neutrald;
 
     &:first-child {
       @extend .pt0;
@@ -84,13 +86,18 @@ body {
     @extend .mb1;
     @extend .fwb;
     @extend .ff-josefin;
+    @extend .neutrald;
   }
 
-  h4 {
+  h4,
+  h5,
+  h6 {
     @extend .fs0;
     @extend .lh1;
     @extend .mb1;
     @extend .tdu;
+    @extend .ff-josefin;
+    @extend .neutrald;
   }
 
   li {

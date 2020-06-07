@@ -61,9 +61,7 @@ Here's mine. I added a testimonial and changed the grid size.
 
 ![](/images/quick-make.jpg#boxed)
 
-And here's the code:
-
-> https://repl.it/@gemmadlou/Starter-End-Example#index.html
+> And here's the [code](https://repl.it/@gemmadlou/Starter-End-Example#index.html).
 
 ## The Reference
 

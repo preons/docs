@@ -1,5 +1,5 @@
 <template>
-  <div class="relative greyd bg-white df-m">
+  <div class="relative df-m">
     <div
       class="dn db-m w-xxbig-m mb12-m mt2-m pa2-m pt1-m pr0-m relative scroll-m s-article fixed-m maxh-90-m"
     >
