@@ -156,6 +156,12 @@ body {
     @extend .pa2-m;
   }
 
+  img[src*='#boxed-dark'] {
+    @extend .bg-dark;
+    @extend .pa1;
+    @extend .pa2-m;
+  }
+
   i,
   em {
     @extend .fxi;
@@ -185,7 +191,8 @@ body {
     overflow-x: hidden;
   }
 
-  :not(pre) > code[class*="language-"], pre[class*="language-"] {
+  :not(pre) > code[class*='language-'],
+  pre[class*='language-'] {
     @extend .bg-white;
   }
 }

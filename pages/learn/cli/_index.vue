@@ -1,14 +1,11 @@
 <template>
   <div class="relative df-m bg-neutrald shrink-20 minw0">
-
     <!-- main article -->
     <div
       class="bg-light pa1 pt3 pl2-m pr2-m pb2-m relative maxw-xxsuper minw0 w-100 shrink-20"
     >
       <div class="s-article">
-        <h1>
-          {{ page.title }}
-        </h1>
+        <h1>{{ page.title }}</h1>
       </div>
 
       <div class="s-article">
@@ -20,19 +17,19 @@
     <div
       class="ff-josefin bg-light dn db-l w-xbig-m mt0-m pr0-m scroll-m relative h-100 w-100 maxw-xbig-m"
     >
-      <ul class="fixed lh0 w-100">
-        <li class="">
+      <ul class="fixed lh0 w-100 maxw-xbig-m minw0">
+        <li class>
           <a class="light bg-neutral pa1 tdx db tfu o-90" href="#"
             >Table of contents</a
           >
         </li>
-        <li class="">
+        <li class>
           <a class="actived pl1 pa-xsmall tdx db" href="#">{{ page.title }}</a>
         </li>
-        <li class="" v-for="heading in headings">
-          <a class="actived pl1 pa-xxsmall tdx db" :href="heading.link">{{
-            heading.name
-          }}</a>
+        <li class v-for="heading in headings">
+          <a class="actived pl1 pa-xxsmall tdx db" :href="heading.link">
+            {{ heading.name }}
+          </a>
         </li>
       </ul>
     </div>
@@ -98,7 +95,7 @@ export default {
           hid: `og:image`,
           property: 'og:image',
           content: this.page.image
-            ? 'https://preons.netlify.app/images/' + this.page.image
+            ? this.page.image
             : 'https://preons.netlify.app/images/satellite.png'
         },
         {
@@ -115,7 +112,7 @@ export default {
           hid: `twitter:card`,
           property: 'twitter:card',
           content: this.page.image
-            ? 'https://preons.netlify.app/images/' + this.page.image
+            ? this.page.image
             : 'https://preons.netlify.app/images/satellite.png'
         },
         {

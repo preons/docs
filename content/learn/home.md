@@ -13,8 +13,9 @@ author: Gemma Black
 
 ## Get started
 
+1. [Install the Preons UI](/learn/ui/installation): Follow the guide to install the Preons UI into your project.
 1. [Build a user interface quickly](/learn/ui/build): A 15-minute guide on how to install Preons and start building a website.
-2. [Generate your own library](/learn/cli/guide): Generate your own library using the preons.yaml configuration file
+1. [Generate your own library](/learn/cli/generate): Generate your own library using the preons.yaml configuration file
 
 ## What is Preons
 
