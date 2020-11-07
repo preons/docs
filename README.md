@@ -1,32 +1,5 @@
 # Preons documentation
 
-[Website](https://preons.netlify.app/) | [Contributing](#contributing)
-
-[![](docs/images/2020-05-16-11-32-52.png)](https://preons.netlify.app/)
-
-## Contributing
-
-This is based on [Nuxt](https://nuxtjs.org/) and [Vue](https://vuejs.org/).
-
-If something's missing, or you want to help with the documentations, you're more than welcome. Most of the effort is going into buiding Preons itself.
-
-```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
