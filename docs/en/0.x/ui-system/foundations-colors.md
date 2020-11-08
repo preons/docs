@@ -73,13 +73,13 @@ Style background colors using the `.<border-color-position>-<color>` convention.
 
 There are 5 border color prefixes.
 
-| Prefix | CSS Rule            |                           |
-| ------ | ------------------- | ------------------------- |
-| bca    | border-color        | _border color, all sides_ |
-| bcl    | border-left-color   | _border color, left_      |
-| bct    | border-top-color    | _border color, top_       |
-| bcr    | border-right-color  | _border color, right_     |
-| bcb    | border-bottom-color | _border color, bottom_    |
+| Prefix  | CSS Rule            |                           |
+| ------- | ------------------- | ------------------------- |
+| `.bca-` | border-color        | _border color, all sides_ |
+| `.bcl-` | border-left-color   | _border color, left_      |
+| `.bct-` | border-top-color    | _border color, top_       |
+| `.bcr-` | border-right-color  | _border color, right_     |
+| `.bcb-` | border-bottom-color | _border color, bottom_    |
 
 ```html
 <p class="bca-red bsa-solid bwa4 pa2">
