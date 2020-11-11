@@ -1,88 +1,90 @@
 # Borders
 
+Border widths, colors, styles and radii.
+
 ### border-bottom-width
 
-| class | value |
-| ----- | ----- |
-| bwb0  | 0     |
-| bwb1  | 1px   |
-| bwb2  | 2px   |
-| bwb3  | 3px   |
-| bwb4  | 4px   |
-| bwb5  | 5px   |
-| bwb6  | 6px   |
-| bwb7  | 7px   |
-| bwb8  | 8px   |
-| bwb9  | 9px   |
-| bwb10 | 10px  |
+| Utility class | CSS Rule |
+| ------------- | -------- |
+| bwb0          | 0        |
+| bwb1          | 1px      |
+| bwb2          | 2px      |
+| bwb3          | 3px      |
+| bwb4          | 4px      |
+| bwb5          | 5px      |
+| bwb6          | 6px      |
+| bwb7          | 7px      |
+| bwb8          | 8px      |
+| bwb9          | 9px      |
+| bwb10         | 10px     |
 
 ### border-top-width
 
-| class | value |
-| ----- | ----- |
-| bwt0  | 0     |
-| bwt1  | 1px   |
-| bwt2  | 2px   |
-| bwt3  | 3px   |
-| bwt4  | 4px   |
-| bwt5  | 5px   |
-| bwt6  | 6px   |
-| bwt7  | 7px   |
-| bwt8  | 8px   |
-| bwt9  | 9px   |
-| bwt10 | 10px  |
+| Utility class | CSS Rule |
+| ------------- | -------- |
+| bwt0          | 0        |
+| bwt1          | 1px      |
+| bwt2          | 2px      |
+| bwt3          | 3px      |
+| bwt4          | 4px      |
+| bwt5          | 5px      |
+| bwt6          | 6px      |
+| bwt7          | 7px      |
+| bwt8          | 8px      |
+| bwt9          | 9px      |
+| bwt10         | 10px     |
 
 ### border-right-width
 
-| class | value |
-| ----- | ----- |
-| bwr0  | 0     |
-| bwr1  | 1px   |
-| bwr2  | 2px   |
-| bwr3  | 3px   |
-| bwr4  | 4px   |
-| bwr5  | 5px   |
-| bwr6  | 6px   |
-| bwr7  | 7px   |
-| bwr8  | 8px   |
-| bwr9  | 9px   |
-| bwr10 | 10px  |
+| Utility class | CSS Rule |
+| ------------- | -------- |
+| bwr0          | 0        |
+| bwr1          | 1px      |
+| bwr2          | 2px      |
+| bwr3          | 3px      |
+| bwr4          | 4px      |
+| bwr5          | 5px      |
+| bwr6          | 6px      |
+| bwr7          | 7px      |
+| bwr8          | 8px      |
+| bwr9          | 9px      |
+| bwr10         | 10px     |
 
 ### border-left-width
 
-| class | value |
-| ----- | ----- |
-| bwl0  | 0     |
-| bwl1  | 1px   |
-| bwl2  | 2px   |
-| bwl3  | 3px   |
-| bwl4  | 4px   |
-| bwl5  | 5px   |
-| bwl6  | 6px   |
-| bwl7  | 7px   |
-| bwl8  | 8px   |
-| bwl9  | 9px   |
-| bwl10 | 10px  |
+| Utility class | CSS Rule |
+| ------------- | -------- |
+| bwl0          | 0        |
+| bwl1          | 1px      |
+| bwl2          | 2px      |
+| bwl3          | 3px      |
+| bwl4          | 4px      |
+| bwl5          | 5px      |
+| bwl6          | 6px      |
+| bwl7          | 7px      |
+| bwl8          | 8px      |
+| bwl9          | 9px      |
+| bwl10         | 10px     |
 
 ### border-width
 
-| class | value |
-| ----- | ----- |
-| bwa0  | 0     |
-| bwa1  | 1px   |
-| bwa2  | 2px   |
-| bwa3  | 3px   |
-| bwa4  | 4px   |
-| bwa5  | 5px   |
-| bwa6  | 6px   |
-| bwa7  | 7px   |
-| bwa8  | 8px   |
-| bwa9  | 9px   |
-| bwa10 | 10px  |
+| Utility class | CSS Rule |
+| ------------- | -------- |
+| bwa0          | 0        |
+| bwa1          | 1px      |
+| bwa2          | 2px      |
+| bwa3          | 3px      |
+| bwa4          | 4px      |
+| bwa5          | 5px      |
+| bwa6          | 6px      |
+| bwa7          | 7px      |
+| bwa8          | 8px      |
+| bwa9          | 9px      |
+| bwa10         | 10px     |
 
 ### border-bottom-color
 
-| class           | value       |
+| Utility class   | CSS Rule    |
 | --------------- | ----------- |
 | bcb-black       | #000000     |
 | bcb-white       | #ffffff     |
@@ -143,7 +145,7 @@
 
 ### border-top-color
 
-| class           | value       |
+| Utility class   | CSS Rule    |
 | --------------- | ----------- |
 | bct-black       | #000000     |
 | bct-white       | #ffffff     |
@@ -204,7 +206,7 @@
 
 ### border-left-color
 
-| class           | value       |
+| Utility class   | CSS Rule    |
 | --------------- | ----------- |
 | bcl-black       | #000000     |
 | bcl-white       | #ffffff     |
@@ -265,7 +267,7 @@
 
 ### border-right-color
 
-| class           | value       |
+| Utility class   | CSS Rule    |
 | --------------- | ----------- |
 | bcr-black       | #000000     |
 | bcr-white       | #ffffff     |
@@ -326,7 +328,7 @@
 
 ### border-color
 
-| class           | value       |
+| Utility class   | CSS Rule    |
 | --------------- | ----------- |
 | bca-black       | #000000     |
 | bca-white       | #ffffff     |
@@ -387,52 +389,52 @@
 
 ### border-style
 
-| class      | value  |
-| ---------- | ------ |
-| bsa-solid  | solid  |
-| bsa-dotted | dotted |
-| bsa-dashed | dashed |
+| Utility class | CSS Rule |
+| ------------- | -------- |
+| bsa-solid     | solid    |
+| bsa-dotted    | dotted   |
+| bsa-dashed    | dashed   |
 
 ### border-bottom-style
 
-| class      | value  |
-| ---------- | ------ |
-| bsb-solid  | solid  |
-| bsb-dotted | dotted |
-| bsb-dashed | dashed |
+| Utility class | CSS Rule |
+| ------------- | -------- |
+| bsb-solid     | solid    |
+| bsb-dotted    | dotted   |
+| bsb-dashed    | dashed   |
 
 ### border-top-style
 
-| class      | value  |
-| ---------- | ------ |
-| bst-solid  | solid  |
-| bst-dotted | dotted |
-| bst-dashed | dashed |
+| Utility class | CSS Rule |
+| ------------- | -------- |
+| bst-solid     | solid    |
+| bst-dotted    | dotted   |
+| bst-dashed    | dashed   |
 
 ### border-right-style
 
-| class      | value  |
-| ---------- | ------ |
-| bsr-solid  | solid  |
-| bsr-dotted | dotted |
-| bsr-dashed | dashed |
+| Utility class | CSS Rule |
+| ------------- | -------- |
+| bsr-solid     | solid    |
+| bsr-dotted    | dotted   |
+| bsr-dashed    | dashed   |
 
 ### border-left-style
 
-| class      | value  |
-| ---------- | ------ |
-| bsl-solid  | solid  |
-| bsl-dotted | dotted |
-| bsl-dashed | dashed |
+| Utility class | CSS Rule |
+| ------------- | -------- |
+| bsl-solid     | solid    |
+| bsl-dotted    | dotted   |
+| bsl-dashed    | dashed   |
 
 ### border-radius
 
-| class  | value |
-| ------ | ----- |
-| bra1   | .5rem |
-| bra2   | 1rem  |
-| bra3   | 2rem  |
-| bra4   | 3rem  |
-| bra5   | 4rem  |
-| bra6   | 5rem  |
-| bra-50 | 50%   |
+| Utility class | CSS Rule |
+| ------------- | -------- |
+| bra1          | .5rem    |
+| bra2          | 1rem     |
+| bra3          | 2rem     |
+| bra4          | 3rem     |
+| bra5          | 4rem     |
+| bra6          | 5rem     |
+| bra-50        | 50%      |

@@ -1,6 +1,6 @@
 # Foundations
 
-An illustrated reference guide for _Preons_ css classes. Unlike modules, components or scopes, _Foundations_ are single css rules represented by a single class. For example, `d-bl` represents `display: block`. For multiple rule classes such as needed for buttons etc, use modules and components.
+An illustrated reference guide for _Preons'_ css classes. _Foundations_ are single css rules represented by a single class. For example, `d-bl` represents `display: block`. For multiple rule classes such as needed for buttons etc, use modules and components, and for control over child elements, use Scopes.
 
 ## The Preons Default Convention
 
@@ -13,3 +13,7 @@ Suffix any utility class with a breakpoint `-m` for medium or `-l` for large in 
 ```html
 <span class="d-in d-bl-m d-inbl-l">Inline mobile, block table</span>
 ```
+
+## Vertical Rhythm
+
+Scaled spaces and sizes follow as a `$baseline: 1.6rem` in the default configuration. Vertical rhythm allows your typography and spacing especially between elements to look consistent.

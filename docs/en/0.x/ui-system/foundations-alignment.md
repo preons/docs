@@ -9,6 +9,7 @@ These CSS properties focus on alignment.
 - bottom
 - right
 - clear
+- v-align
 
 ## Text Align
 
@@ -177,3 +178,11 @@ Discrete positioning follows the discrete rule syntax to allow for ad-hoc sizes.
 | class | value |
 | ----- | ----- |
 | cb    | both  |
+
+## Vertical alignment
+
+| class    | value             |
+| -------- | ----------------- |
+| `.va-bo` | `v-align: bottom` |
+| `.va-mi` | `v-align: middle` |
+| `.va-to` | `v-align: top`    |

@@ -3,10 +3,10 @@
 The UI system is an illustrated reference guide for:
 
 - Foundations  
-  Utility CSS classes
+  Utility CSS classes with a `one-rule, one-class` principle.
 - Modules  
-  Multi-rule CSS
+  Multi-rule CSS classes for things like buttons
 - UI Components  
-  Designed to speed-up prototypinh
+  Designed fast prototyping and development
 - Scopes
-  For when utility classes aren't possible, eg. typography
+  To control code child elements using a single class
