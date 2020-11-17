@@ -1,6 +1,6 @@
 # HTML
 
-To get going, installing the Preons theme is fastest with plain HTML.
+To get going, installing the Preons theme is most fast with plain HTML.
 
 - [Use the HTML5 starter](#use-the-html5-starter)
 - [Add to existing HTML markup](#with-existing-html-markup)
