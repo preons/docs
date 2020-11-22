@@ -2,9 +2,12 @@
 
 Nuxt is a Vue.js framework with SSR capabilities. This guide will show you how to add Preons to Nuxt using a fresh Nuxt app as an example.
 
-> If you already have a Nuxt app, go to the [Configure Sass](#configure-sass) section.
+- [Using Sass](#using-sass)
+- [Using CSS](#using-css)
 
-## Steps
+## Using Sass
+
+> If you already have a Nuxt app, go to the [Configure Sass](#configure-sass) section.
 
 ### Setup Nuxt
 
@@ -92,7 +95,73 @@ Start the Nuxt app to preview the update
 yarn dev
 ```
 
-Then view style on the app link referenced in the terminal.
+Finally, view the app in the browser.
+
+### Next steps
+
+Continue with the Preons UI System for components and utility classes.
+
+## Using CSS
+
+> If you already have a Nuxt app, go to the [Configure Sass](#configure-sass) section.
+
+### Setup Nuxt
+
+Install Nuxt to have a project scaffold. It will take you through a few questions.
+
+```bash
+yarn create nuxt-app preons-nuxt
+```
+
+Prepare your Nuxt environment.
+
+```bash
+cd preons-nuxt
+```
+
+### Add stylesheets
+
+Add Google Fonts and the Preons theme.
+
+```js
+{
+  head: {
+    link: [
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://unpkg.com/preons/dist/preons.css",
+      },
+    ];
+  }
+}
+```
+
+### Create a template
+
+Add basic styling to `pages/index.vue`.
+
+```js
+<template>
+  <div class="d-fl ai-center jc-center minh-100vh">
+    <h1 class="fs5 lh5 purple">Preons</h1>
+  </div>
+</template>
+```
+
+### View app
+
+Start the Nuxt app to preview the update
+
+```bash
+yarn dev
+```
+
+Finally, view the app in the browser.
 
 ### Next steps
 
